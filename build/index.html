@@ -14,22 +14,46 @@
 
 <body>
   <header class="main-header">
-    <div class="main-header__container">
-      <div class="container">
-        <div class="main-header__search-wrapper">
+    <div class="main-header__wrapper">
+      <div class="main-header__container container">
+        <form class="main-header__search-wrapper" method="get" action="https://echo.htmlacademy.ru">
           <label class="visually-hidden" for="field-search">Введите поисковый запрос</label>
-          <input type="text" class="main-header__search" id="field-search"></div>
-        <button class="main-header__button-menu btn" aria-label="Открыть меню сайта"></button>
+          <input type="text" class="main-header__search" type="text" name="search" id="field-search" placeholder="Type here to search">
+          <svg class="main-header__search-loupe">
+            <use xlink:href=" img/sprite.svg#icon-search"></use>
+          </svg>
+          <!-- TODO:  в свободное время стилизовать кнопку -->
+          <!-- <button class="main-header__search-button" type="submit">Найти</button> -->
+        </form>
+        <!-- TODO:  при отключенном JS убрать кнопку-->
+        <div class="main-header__button-wrapper">
+          <button class="main-header__button-menu" aria-label="Открыть меню сайта">
+            <svg class="main-header__button-icon">
+              <use xlink:href="img/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
         <div class="main-header__logo-wrapper">
           <!-- TODO: убрать cursor у неактивного лого -->
           <a>
-            <svg></svg>
+            <svg class="main-header__logo">
+              <use xlink:href="img/sprite.svg#icon-logo"></use>
+            </svg>
           </a>
         </div>
-        <div class="main-header__login-wrapper">
-          <a href="" class="main-header__login">Login</a></div>
-        <div class="main-header__basket-wrapper">
-          <a href="" class="main-header__basket">Cart</a></div>
+        <div class="main-header__user-wrapper">
+          <ul class="main-header__user-list">
+            <li class="main-header__user-item main-header__user-item--login">
+              <!-- TODO: проставить ссылки; у логина своя страница -->
+              <a href="">Login</a></li>
+            <li class="main-header__user-item main-header__user-item--basket">
+              <a href="">Cart 0
+                <svg class="main-header__basket-svg">
+                  <use xlink:href="img/sprite.svg#icon-basket"></use>
+                </svg>
+              </a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <nav class="main-header__nav container">

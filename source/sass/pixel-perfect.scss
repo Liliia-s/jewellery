@@ -1,12 +1,12 @@
 body {
   @media (min-width: $desktop-max-width) and (max-width: 1366px) {
-    background: url("../img/desk.jpg") no-repeat;
+    background: url("../img/desk-index.jpg") no-repeat;
     min-height: 4066px;
     opacity: 0.2;
   }
 
   @media (min-width: $tablet-width) and (max-width: 768px) {
-    background: url("../img/tab.jpg") no-repeat;
+    background: url("../img/tab-menu.jpg") no-repeat;
     // background: url("../img/tab.jpg") no-repeat;
     // background: url("../img/pixel-perfect-tablet-yellow.jpg") no-repeat;
     // min-height: 3440px;
@@ -15,7 +15,7 @@ body {
   }
 
   @media (max-width: 320px) {
-    background: url("../img/mob1.jpg") no-repeat;
+    background: url("../img/mob-index.jpg") no-repeat;
     min-height: 4869px;
     // min-height: 4472px;
     opacity: 0.2;
