@@ -151,22 +151,25 @@
 //   background-color: transparent;
 // }
 
-
 .main-header__button-wrapper {
-  display: none;
-
   @media (max-width: $tablet-max-width) {
-    display: block;
     width: 33%;
   }
 }
 // TODO: проставить миксину для кнопок и инпутов; цвет по-умолчанию прозрачный, если не задано иное
 .main-header__button-menu {
+  display: none;
   width: 29px;
   height: 23px;
   padding: 0;
   background-color: transparent;
   border: none;
+
+  &--show {
+    @media (max-width: $tablet-max-width) {
+      display: block;
+    }
+  }
 }
 
 .main-header__button-icon {

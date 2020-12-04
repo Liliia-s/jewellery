@@ -6,12 +6,13 @@
   var mainNav = mainHeader.querySelector('.main-header__nav');
   var login = mainHeader.querySelector('.main-header__user-item--login');
   var logo = mainHeader.querySelector('.main-header__logo');
+  var menuBtn = mainHeader.querySelector('.main-header__button-menu');
   var menuBtnIcon = mainHeader.querySelector('.main-header__button-icon');
   var menuBasketIcon = mainHeader.querySelector('.main-header__basket-svg');
-  var menuBtn = mainHeader.querySelector('.main-header__button-menu');
 
   var changeElements = function () {
     mainHeader.classList.add('main-header--white');
+    menuBtn.classList.add('main-header__button-menu--show');
     search.classList.add('main-header__search-wrapper--hide');
     mainNav.classList.add('main-header__nav--hide');
     login.classList.add('main-header__user-item--hide');
