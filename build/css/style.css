@@ -285,29 +285,22 @@ html {
     .container {
       padding: 0 15px; } }
 
-@media (min-width: 1366px) and (max-width: 1366px) {
-  body {
-    background: url("../img/desk-index.jpg") no-repeat;
-    min-height: 4066px;
-    opacity: 0.2; } }
-
-@media (min-width: 768px) and (max-width: 768px) {
-  body {
-    background: url("../img/tab-menu.jpg") no-repeat;
-    min-height: 4047px;
-    opacity: 0.2; } }
-
-@media (max-width: 320px) {
-  body {
-    background: url("../img/mob-index.jpg") no-repeat;
-    min-height: 4869px;
-    opacity: 0.2; } }
-
 @media (max-width: 1023px) {
   .main-header {
     position: relative;
     padding-bottom: 124px;
-    background-color: #a87b62; } }
+    background-color: #a87b62; }
+    .main-header--white {
+      background-color: #ffffff; }
+    .main-header--position {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; } }
+
+@media (max-width: 767px) {
+  .main-header {
+    padding-bottom: 84px; } }
 
 .main-header__wrapper {
   border-bottom: 1px solid #f6f5f4; }
@@ -325,7 +318,13 @@ html {
     .main-header__container {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding-top: 30px; } }
+  @media (max-width: 767px) {
+    .main-header__container {
+      padding-top: 20px; } }
 
 .main-header__search-wrapper {
   position: relative;
@@ -336,7 +335,12 @@ html {
           -ms-flex-order: 1;
               order: 1;
       width: 100%;
-      margin-top: 35px; } }
+      margin-top: 35px; }
+      .main-header__search-wrapper--hide {
+        display: block; } }
+  @media (max-width: 767px) {
+    .main-header__search-wrapper {
+      margin-top: 25px; } }
 
 .main-header__search {
   width: 350px;
@@ -430,8 +434,7 @@ html {
   @media (max-width: 1023px) {
     .main-header__button-wrapper {
       display: block;
-      width: 33%;
-      padding-top: 24px; } }
+      width: 33%; } }
 
 .main-header__button-menu {
   width: 29px;
@@ -442,7 +445,10 @@ html {
 
 .main-header__button-icon {
   width: 25px;
-  height: 18px; }
+  height: 18px;
+  stroke: #ffffff; }
+  .main-header__button-icon--black {
+    stroke: #000000; }
 
 .main-header__logo-wrapper {
   display: -webkit-box;
@@ -459,6 +465,12 @@ html {
   @media (max-width: 1023px) {
     .main-header__logo {
       stroke: #ffffff; } }
+  @media (max-width: 767px) {
+    .main-header__logo {
+      width: 52px;
+      height: 52px; } }
+  .main-header__logo--gold {
+    stroke: #a87b62; }
 
 .main-header__user-wrapper {
   width: 33%;
@@ -513,6 +525,15 @@ html {
     bottom: 75px;
     left: 45px; } }
 
+@media (max-width: 767px) {
+  .main-header__user-item--login {
+    bottom: 45px;
+    left: 16px; } }
+
+@media (max-width: 1023px) {
+  .main-header__user-item--hide {
+    display: none; } }
+
 .main-header__user-item--basket a:hover > svg,
 .main-header__user-item--basket a:focus > svg {
   stroke-opacity: 0.5; }
@@ -521,8 +542,15 @@ html {
   stroke-opacity: 0.3; }
 
 @media (max-width: 1023px) {
-  .main-header__user-item--basket a {
-    font-size: 0; } }
+  .main-header__user-link span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0); } }
 
 .main-header__basket-svg {
   display: none; }
@@ -531,14 +559,22 @@ html {
       display: block;
       width: 20px;
       height: 18px;
-      fill: none; } }
+      fill: none;
+      stroke: #ffffff; }
+      .main-header__basket-svg--black {
+        stroke: #000000; } }
 
 .main-header__nav {
   padding-top: 19px;
   padding-bottom: 19px; }
   @media (max-width: 1023px) {
     .main-header__nav {
-      padding-top: 33px; } }
+      padding-top: 33px; }
+      .main-header__nav--hide {
+        display: none; } }
+  @media (max-width: 767px) {
+    .main-header__nav {
+      padding-top: 22px; } }
 
 .main-header__nav-category,
 .main-header__nav-company {
@@ -562,6 +598,9 @@ html {
           -ms-flex-direction: column;
               flex-direction: column;
       padding-bottom: 39px; } }
+  @media (max-width: 767px) {
+    .main-header__nav-category {
+      padding-bottom: 30px; } }
 
 .main-header__nav-category li:not(:last-child) {
   padding-right: 33px; }
