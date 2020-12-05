@@ -1,0 +1,11 @@
+.promo {
+  padding-bottom: 3498px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 3372px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 3806px;
+  }
+}

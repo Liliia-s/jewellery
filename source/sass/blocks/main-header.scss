@@ -55,7 +55,7 @@
     margin-top: 35px;
 
     &--hide {
-      display: block;
+      display: none;
     }
   }
 
@@ -293,14 +293,7 @@
 
 .main-header__user-link span {
   @media (max-width: $tablet-max-width) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0);
+    @include visually-hidden;
   }
 }
 

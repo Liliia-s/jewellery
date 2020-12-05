@@ -1,0 +1,264 @@
+.main-footer {
+  display: flex;
+  padding-top: 90px;
+  padding-bottom: 54px;
+  background-color: $color-black;
+
+  @media (max-width: $desktop-max-width-2) {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 33px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 55px;
+  }
+}
+
+.main-footer__subscription {
+  padding-right: 92px;
+
+  @media (max-width: $desktop-max-width-2) {
+    padding-right: 118px;
+    padding-bottom: 39px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 0;
+  }
+}
+
+.main-footer__subscription p {
+  margin: 0;
+}
+
+.main-footer__subscription p:first-child {
+  padding-bottom: 10px;
+  font-family: "Cormorant Garamond", "Times New Roman", "Georgia", serif;
+  font-size: 34px;
+  line-height: 44.2px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: $color-white;
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 50px;
+    padding-bottom: 14px;
+  }
+}
+
+.main-footer__subscription p:first-child + p {
+  padding-bottom: 40px;
+  color: $color-grey;
+}
+
+.main-footer__subscription-form {
+  position: relative;
+
+  @media (max-width: $desktop-max-width-2) {
+    width: 560px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+}
+
+.main-footer__subscription-input {
+  width: 500px;
+  padding: 5px 50px 10px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-white;
+  outline: none;
+  cursor: pointer;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: $color-grey;
+  }
+
+  &:hover::placeholder {
+    color: rgba($color-grey, 0.7);
+  }
+
+  &[type="email"] {
+    color: $color-white;
+  }
+
+  @media (max-width: $desktop-max-width-2) {
+    width: 560px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+}
+
+.main-footer__subscription-button {
+  position: absolute;
+  content: "";
+  top: 5px;
+  right: 0;
+  padding: 0;
+  color: $color-white;
+  // TODO: Спросить у Оли как переопределить цвет фона, если при выборе почты из сохраненных данных применяется автоматически светлый фон - http://joxi.ru/Y2L90yoIEvnKpA?d=1 , при обычном вводе все ок - http://joxi.ru/brR96LoIO8QgaA?d=1
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-white, 0.5);
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    stroke: rgba($color-white, 0.5);
+  }
+
+  &:active svg {
+    stroke: rgba($color-white, 0.3);
+  }
+}
+
+.main-footer__subscription-button span {
+  padding-right: 10px;
+}
+
+.main-footer__subscription-svg {
+  width: 30px;
+  height: 11px;
+  stroke: $color-white;
+}
+
+
+.main-footer__menu {
+  display: flex;
+  width: 100%;
+  padding-top: 8px;
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+  }
+}
+
+.main-footer__menu ul {
+  @include reset-list;
+
+  &:first-child {
+    width: 41%;
+    margin-right: 20px;
+
+    @media (max-width: $desktop-max-width-2) {
+      width: 37%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+      margin-right: 0;
+      padding-bottom: 20px;
+    }
+  }
+
+  &:first-child + ul {
+    width: 38%;
+    margin-right: 20px;
+
+    @media (max-width: $desktop-max-width-2) {
+      width: 29%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+      margin-right: 0;
+      padding-bottom: 23px;
+    }
+  }
+
+  &:last-child {
+    width: 22%;
+
+    @media (max-width: $desktop-max-width-2) {
+      width: 35%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+  }
+}
+
+.main-footer__menu-list li {
+  padding-bottom: 22px;
+}
+
+.main-footer__menu-list {
+  &--social {
+    @media (max-width: $mobile-max-width) {
+      display: flex;
+    }
+  }
+
+  &--social li {
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.main-footer__menu-item a {
+  font-weight: 500;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-white, 0.5);
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: rgba($color-white, 0.5);
+  }
+
+  &:active svg {
+    fill: rgba($color-white, 0.3);
+  }
+}
+
+.main-footer__social-link svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 14px;
+  fill: $color-white;
+
+  @media (max-width: $mobile-max-width) {
+    width: 20px;
+    height: 21px;
+    margin-right: 30px;
+  }
+}
+
+.main-footer__social-link span {
+  @media (max-width: $mobile-max-width) {
+    @include visually-hidden;
+  }
+}
+
+.main-footer__social-link {
+  &--fb svg {
+    @media (max-width: $mobile-max-width) {
+      width: 12px;
+    }
+  }
+}
