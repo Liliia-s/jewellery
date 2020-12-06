@@ -1,0 +1,41 @@
+.slider__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.slider__btn {
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  &:hover svg,
+  &:focus svg {
+    stroke: rgba($color-brown, 0.5);
+  }
+
+  &:active svg {
+    stroke: rgba($color-brown, 0.3);
+  }
+}
+
+.slider__btn svg {
+  width: 30px;
+  height: 11px;
+  stroke: $color-brown;
+}
+
+.slider ul {
+  @include reset-list;
+}
+
+.slider__cards-list {
+  display: flex;
+}
+
+.slider__pagination-list {
+  display: flex;
+}
