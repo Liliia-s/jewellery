@@ -17,6 +17,10 @@
   background: url("../img/back-desk.jpg") no-repeat;
   background-size: cover;
   z-index: -2;
+
+  @media (min-width: $desktop-width) {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  }
   // TODO: У Оли спросить как сделать комбинацию, чтобы не ругался W3C - http://joxi.ru/82Q95DlI94yjO2?d=1 и если на фоне в макете есть прозрачность, то с ней сразу сохранять или ставить через css
   // background-image:
   //   linear-gradient(rgba(#564034, 0.7)),
@@ -33,6 +37,16 @@
     background-color: rgba($color-brown-light, 0.7);
     z-index: -1;
   }
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 185px;
+    padding-bottom: 180px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 187px;
+    padding-bottom: 184px;
+  }
 }
 
 .promo p {
@@ -47,6 +61,10 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   color: $color-white;
+
+  @media (max-width: $tablet-max-width) {
+    line-height: 50.5px;
+  }
 
   @media (max-width: $mobile-max-width) {
     font-size: 38px;

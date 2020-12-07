@@ -12,6 +12,7 @@
 
   var changeElements = function () {
     mainHeader.classList.add('main-header--white');
+    mainHeader.classList.add('main-header--indents');
     menuBtn.classList.add('main-header__button-menu--show');
     search.classList.add('main-header__search-wrapper--hide');
     mainNav.classList.add('main-header__nav--hide');

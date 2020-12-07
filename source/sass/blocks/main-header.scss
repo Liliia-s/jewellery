@@ -4,8 +4,22 @@
     padding-bottom: 124px;
     background-color: $color-brown;
 
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 84px;
+    }
+
     &--white {
       background-color: $color-white;
+    }
+
+    &--indents {
+      @media (max-width: $tablet-max-width) {
+        padding-bottom: 10px;
+      }
+
+      @media (max-width: $mobile-max-width) {
+        padding-bottom: 0;
+      }
     }
 
     &--position {
@@ -14,10 +28,6 @@
       left: 0;
       width: 100%;
     }
-  }
-
-  @media (max-width: $mobile-max-width) {
-    padding-bottom: 84px;
   }
 }
 

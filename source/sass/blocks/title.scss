@@ -9,20 +9,31 @@
   font-size: 34px;
   line-height: 44.2px;
   font-weight: 700;
+
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 19px;
+  }
+
+  // @media (max-width: $mobile-max-width) {
+  //   padding-bottom: 9px;
+  // }
 }
 
 .title a {
-  padding-bottom: 3px;
-  font-weight: 500;
-  color: $color-black2;
-  border-bottom: 1px solid $color-brown;
+  @include decor-link;
 
-  &:hover,
-  &:focus {
-    color: rgba($color-brown, 0.5);
-  }
+  // padding-bottom: 3px;
+  // font-weight: 500;
+  // color: $color-black2;
+  // border-bottom: 1px solid $color-brown;
 
-  &:active {
-    color: rgba($color-brown, 0.3);
-  }
+  // &:hover,
+  // &:focus {
+  //   color: rgba($color-brown, 0.5);
+  // }
+
+  // &:active {
+  //   color: rgba($color-brown, 0.3);
+  // }
 }
