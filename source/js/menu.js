@@ -27,6 +27,7 @@
   var onMenuBtnClick = function (evt) {
     evt.preventDefault();
     mainHeader.classList.toggle('main-header--white');
+    mainHeader.classList.toggle('main-header--indents');
     mainHeader.classList.toggle('main-header--position');
     search.classList.toggle('main-header__search-wrapper--hide');
     mainNav.classList.toggle('main-header__nav--hide');
