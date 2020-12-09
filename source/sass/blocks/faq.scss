@@ -110,8 +110,12 @@
 
     &:hover,
     &:focus {
-      color: rgba($color-black2, 0.5);
+      color: $color-brown;
     }
+
+    // &:active {
+    //   color: rgba($color-brown, 0.5);
+    // }
   }
 
   &--indents {
