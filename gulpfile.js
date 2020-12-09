@@ -108,10 +108,6 @@ gulp.task('update', function () {
 gulp.task('server', function () {
   server.init({
     server: 'build/'
-//     notify: false,
-//     open: true,
-//     cors: true,
-//     ui: false
   });
 
   gulp.watch('source/sass/**/*.scss', gulp.series('css'));
@@ -126,4 +122,4 @@ gulp.task('refresh', function (done) {
 });
 
 gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'js'));
-gulp.task('start', gulp.series('build'));
+gulp.task('start', gulp.series('build', 'server'));
