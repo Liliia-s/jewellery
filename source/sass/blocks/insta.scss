@@ -1,0 +1,86 @@
+.insta {
+  padding-top: 48px;
+  padding-bottom: 130px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 34px;
+    padding-bottom: 79px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+}
+
+.insta__title {
+  padding-bottom: 63px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 66px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 51px;
+  }
+}
+
+.insta__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 414px;
+
+  @media (max-width: $tablet-max-width) {
+    height: 240px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    height: 362px;
+  }
+}
+
+.insta__item {
+  align-self: flex-end;
+
+  &--01,
+  &--02 {
+    align-self: flex-start;
+  }
+
+  &--03,
+  &--05 {
+    align-self: center;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    &--06,
+    &--07 {
+      display: none;
+    }
+
+    &--01 {
+      order: 1;
+    }
+
+    &--02 {
+      order: 2;
+    }
+
+    &--03 {
+      order: 4;
+      align-self: flex-end;
+    }
+
+    &--04 {
+      order: 5;
+    }
+
+    &--05 {
+      order: 3;
+      align-self: flex-start;
+    }
+  }
+}
