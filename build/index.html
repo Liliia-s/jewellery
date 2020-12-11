@@ -7,9 +7,20 @@
   <meta name="description" content="Закажите ювелирные украшения в официальном интернет-магазине CH! Специальные предложения. Фильтр подбора по вставкам, размеру, цене и другим параметрам. Условия доставки, примерки и оплаты.">
   <title>Интернет-магазин ювелирных украшений CH</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- FIXME: проставить актуальные шрифты проекта -->
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-bold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-medium.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-bookitalic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-bookitalic.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-italic.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,7 +37,6 @@
           <!-- TODO:  в свободное время стилизовать кнопку -->
           <!-- <button class="main-header__search-button" type="submit">Найти</button> -->
         </form>
-        <!-- TODO:  при отключенном JS убрать кнопку-->
         <div class="main-header__button-wrapper">
           <button class="main-header__button-menu" aria-label="Открыть меню сайта">
             <svg class="main-header__button-icon">
@@ -35,8 +45,7 @@
           </button>
         </div>
         <div class="main-header__logo-wrapper">
-          <!-- TODO: убрать cursor у неактивного лого -->
-          <a>
+          <a class="main-header__logo-link main-header__logo-link--inactive">
             <svg class="main-header__logo">
               <use xlink:href="img/sprite.svg#icon-logo"></use>
             </svg>
@@ -83,7 +92,7 @@
   </header>
 
   <main>
-    <section class="promo">
+    <section class="promo promo--index">
       <div class="container">
         <h1 class="visually-hidden">Купить ювелирные изделия в Москве</h1>
         <p class="promo__title">PERFECTION</p>
@@ -99,7 +108,7 @@
         </button>
         <div class="slider__text-wrapper title">
           <h2>New In</h2>
-          <a href="">Shop Now</a>
+          <a href="catalog.html">Shop Now</a>
         </div>
         <button class="slider__btn slider__btn--right">
           <svg>
@@ -111,7 +120,7 @@
         <ul class="slider__cards-list">
           <li>
             <article class="product-card">
-              <a href="" class="product-card__link">
+              <a class="product-card__link">
                 <div class="product-card__picture">
                   <picture>
                     <!-- 1х: 270px; 2x: 540px -->
@@ -329,13 +338,13 @@
           </li>
         </ul>
       </div>
-      <ul class="slider__pagination-list">
-        <li class="slider__pagination-item"><a class="slider__pagination-link slider__pagination-link--active">1</a></li>
-        <li class="slider__pagination-item"><a href="" class="slider__pagination-link">2</a></li>
-        <li class="slider__pagination-item"><a href="" class="slider__pagination-link">3</a></li>
-        <li class="slider__pagination-item"><a href="" class="slider__pagination-link">4</a></li>
-        <li class="slider__pagination-item"><a href="" class="slider__pagination-link">5</a></li>
-        <li class="slider__pagination-item"><a href="" class="slider__pagination-link">6</a></li>
+      <ul class="slider__pagination-list pagination">
+        <li class="pagination-item"><a class="pagination-link pagination-link--active">1</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">2</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">3</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">4</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">5</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">6</a></li>
       </ul>
     </section>
     <section class="blog container">

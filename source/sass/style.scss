@@ -11,11 +11,13 @@
 // TODO: блок new под вопросом либо сделать у main общий класс для блоков
 @import "blocks/new";
 @import "blocks/slider";
+@import "blocks/pagination";
 @import "blocks/title";
 @import "blocks/product-card";
 @import "blocks/blog";
 @import "blocks/faq";
 @import "blocks/insta";
+@import "blocks/catalog";
 
 
 @import "blocks/main-footer";

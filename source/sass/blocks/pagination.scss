@@ -1,0 +1,35 @@
+.pagination {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+}
+
+.pagination-item a {
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-grey;
+}
+
+.pagination-item .pagination-link {
+  &:not(.pagination-link--active):hover,
+  &:not(.pagination-link--active):focus {
+    color: rgba($color-grey, 0.5);
+  }
+
+  &:not(.pagination-link--active):active {
+    color: rgba($color-grey, 0.3);
+  }
+
+  &--active {
+    color: $color-black2;
+    cursor: default;
+  }
+}

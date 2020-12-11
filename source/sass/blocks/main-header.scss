@@ -198,6 +198,23 @@
   width: 34%;
 }
 
+.main-header__logo-link {
+  &--inactive {
+    cursor: default;
+  }
+
+  &--active {
+    &:hover svg,
+    &:focus svg {
+      stroke: $color-black2;
+    }
+
+    &:active svg {
+      stroke: rgba($color-black2, 0.3);
+    }
+  }
+}
+
 .main-header__logo {
   width: 66px;
   height: 66px;
