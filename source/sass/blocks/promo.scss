@@ -45,10 +45,10 @@
     padding-bottom: 97px;
     background: url("../img/back-desk-catalog.jpg") no-repeat;
 
-    // @media (max-width: $tablet-max-width) {
-    //   padding-top: 185px;
-    //   padding-bottom: 180px;
-    // }
+    @media (max-width: $tablet-max-width) {
+      background: url("../img/back-tab-catalog.jpg") no-repeat;
+      background-size: cover;
+    }
 
     // @media (max-width: $mobile-max-width) {
     //   padding-top: 187px;

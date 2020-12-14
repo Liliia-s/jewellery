@@ -190,6 +190,10 @@
 
 .catalog__products-wrapper {
   width: 920px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 678px;
+  }
 }
 
 .catalog__products-list {
@@ -197,6 +201,10 @@
   display: flex;
   flex-wrap: wrap;
   padding-left: 50px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 0;
+  }
 }
 
 .catalog__products-list li {
@@ -214,6 +222,11 @@
   margin-left: 398px;
   padding-top: 36px;
   padding-bottom: 75px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 678px;
+    margin: 0 45px;
+  }
 }
 
 .catalog__pagination-wrapper button {

@@ -699,6 +699,10 @@ html {
     padding-top: 92px;
     padding-bottom: 97px;
     background: url("../img/back-desk-catalog.jpg") no-repeat; }
+    @media (max-width: 1023px) {
+      .promo--catalog {
+        background: url("../img/back-tab-catalog.jpg") no-repeat;
+        background-size: cover; } }
 
 .promo p {
   margin: 0;
@@ -897,6 +901,9 @@ html {
   @media (max-width: 767px) {
     .product-card {
       width: 130px; } }
+  @media (max-width: 1023px) {
+    .product-card--catalog {
+      width: 206px; } }
 
 .product-card a:hover, .product-card a:focus {
   -webkit-box-shadow: 0 2px 10px 5px #a87b62;
@@ -1465,6 +1472,9 @@ html {
 
 .catalog__products-wrapper {
   width: 920px; }
+  @media (max-width: 1023px) {
+    .catalog__products-wrapper {
+      width: 678px; } }
 
 .catalog__products-list {
   margin: 0;
@@ -1476,6 +1486,9 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-left: 50px; }
+  @media (max-width: 1023px) {
+    .catalog__products-list {
+      padding-left: 0; } }
 
 .catalog__products-list li {
   padding-bottom: 14px; }
@@ -1493,6 +1506,10 @@ html {
   margin-left: 398px;
   padding-top: 36px;
   padding-bottom: 75px; }
+  @media (max-width: 1023px) {
+    .catalog__pagination-wrapper {
+      width: 678px;
+      margin: 0 45px; } }
 
 .catalog__pagination-wrapper button {
   width: 69px;
