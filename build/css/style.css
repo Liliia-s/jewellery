@@ -285,24 +285,6 @@ html {
     .container {
       padding: 0 15px; } }
 
-@media (min-width: 1366px) and (max-width: 1366px) {
-  body {
-    background: url("../img/desk-catalog.jpg") no-repeat;
-    min-height: 4066px;
-    opacity: 0.2; } }
-
-@media (min-width: 768px) and (max-width: 768px) {
-  body {
-    background: url("../img/tab-catalog.jpg") no-repeat 50% 0;
-    min-height: 4047px;
-    opacity: 0.2; } }
-
-@media (max-width: 320px) {
-  body {
-    background: url("../img/mob-catalog.jpg") no-repeat 50% 0;
-    min-height: 4869px;
-    opacity: 0.2; } }
-
 @media (max-width: 1023px) {
   .main-header {
     position: relative;
@@ -1202,44 +1184,52 @@ html {
       font-size: 14px;
       line-height: 19.6px; } }
 
-.faq__item p.faq__question {
+.js-head {
   position: relative; }
-  .faq__item p.faq__question::after {
+  .js-head::after {
     position: absolute;
     content: "";
-    top: 50px;
-    right: 50px;
     width: 17px;
     height: 10px;
     background: url("../img/arrow-up.svg") no-repeat; }
-    @media (max-width: 1365px) {
-      .faq__item p.faq__question::after {
-        right: 30px; } }
     @media (max-width: 1023px) {
-      .faq__item p.faq__question::after {
-        top: 47px;
-        right: 35px;
+      .js-head::after {
         width: 40px;
         height: 20px; } }
     @media (max-width: 767px) {
-      .faq__item p.faq__question::after {
-        top: 23px;
-        right: 15px;
+      .js-head::after {
         width: 30px;
         height: 15px; } }
-  .faq__item p.faq__question--state {
+  .js-head--faq::after {
+    top: 50px;
+    right: 50px; }
+    @media (max-width: 1365px) {
+      .js-head--faq::after {
+        right: 30px; } }
+    @media (max-width: 1023px) {
+      .js-head--faq::after {
+        top: 47px;
+        right: 35px; } }
+    @media (max-width: 767px) {
+      .js-head--faq::after {
+        top: 23px;
+        right: 15px; } }
+  .js-head--filter::after {
+    top: 30px;
+    right: 21px; }
+  .js-head--state {
     cursor: pointer; }
-    .faq__item p.faq__question--state:hover, .faq__item p.faq__question--state:focus {
+    .js-head--state:hover, .js-head--state:focus {
       color: #a87b62; }
-  .faq__item p.faq__question--indents {
+  .js-head--indents {
     padding-bottom: 43px; }
     @media (max-width: 767px) {
-      .faq__item p.faq__question--indents {
+      .js-head--indents {
         padding-bottom: 20px; } }
-  .faq__item p.faq__question--arrow::after {
+  .js-head--down::after {
     background: url("../img/arrow-down.svg") no-repeat; }
 
-.faq__answer--hide {
+.js-head__content--hide {
   display: none; }
 
 .insta {
@@ -1334,6 +1324,132 @@ html {
 .catalog__filter-wrapper {
   width: 250px; }
 
+.catalog__fieldset-wrapper {
+  border: 1px solid #a87b62; }
+  .catalog__fieldset-wrapper:not(:last-child) {
+    border-bottom: none; }
+
+.catalog__filter-fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+.catalog__filter-legend {
+  width: 100%;
+  padding: 24px 40px 22px 25px;
+  font-weight: 500; }
+  @media (max-width: 1365px) {
+    .catalog__filter-legend {
+      font-size: 18px;
+      line-height: 23.4px; } }
+
+.catalog__filter-checkbox {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-right: 20px;
+  padding-bottom: 27px;
+  padding-left: 34px; }
+
+.catalog__filter-checkbox li:not(:last-child) {
+  padding-bottom: 10px; }
+
+.catalog__filter-label::before,
+.catalog__filter-label::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 0;
+  width: 16px;
+  height: 16px; }
+
+.catalog__filter-input + .catalog__filter-label::before {
+  border: 1px solid #a87b62; }
+
+.catalog__filter-input:checked + .catalog__filter-label::after {
+  background-color: #a87b62; }
+
+.catalog__filter-input:disabled + .catalog__filter-label,
+.catalog__filter-input:disabled + .catalog__filter-label::after,
+.catalog__filter-input:disabled + .catalog__filter-label::before {
+  opacity: 0.3;
+  cursor: default; }
+
+.catalog__filter-input:hover + .catalog__filter-label::before,
+.catalog__filter-input:focus + .catalog__filter-label::before {
+  border: 2px solid #a87b62; }
+
+.catalog__filter-label {
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+  line-height: 18.2px;
+  font-weight: 500;
+  cursor: pointer; }
+  @media (max-width: 1365px) {
+    .catalog__filter-label {
+      font-size: 16px;
+      line-height: 20.8px; } }
+
+.catalog__filter-range {
+  padding: 4px 25px 16px 25px; }
+
+.catalog__range-controls {
+  position: relative;
+  padding-bottom: 13px; }
+
+.catalog__range-scale {
+  height: 1px;
+  background-color: #f0eae4; }
+
+.catalog__range-bar {
+  width: 90px;
+  height: 1px;
+  margin-left: 60px;
+  background-color: #a87b62; }
+
+.catalog__range-toggle {
+  position: absolute;
+  top: -7px;
+  width: 15px;
+  height: 15px;
+  background-color: #a87b62;
+  border-radius: 50%;
+  cursor: pointer; }
+  .catalog__range-toggle--min {
+    left: 45px; }
+  .catalog__range-toggle--max {
+    right: 33px; }
+
+.catalog__range-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 37px; }
+
+.catalog__price,
+.catalog__price input {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px; }
+
+.catalog__price-wrapper:not(:last-child) {
+  margin-right: auto; }
+
+.catalog__price input {
+  max-width: 50px;
+  padding: 0;
+  border: none;
+  background: none; }
+
+.catalog__button-wrapper {
+  padding-top: 36px; }
+
+.catalog__filter-button {
+  width: 250px; }
+  .catalog__filter-button:not(:last-child) {
+    margin-bottom: 25px; }
+
 .catalog__products-wrapper {
   width: 920px; }
 
@@ -1377,6 +1493,32 @@ html {
     color: rgba(29, 22, 19, 0.5); }
   .catalog__pagination-wrapper button:active {
     color: rgba(29, 22, 19, 0.3); }
+
+.btn {
+  display: block;
+  padding: 24px 28px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  background-color: transparent; }
+  .btn--brown {
+    color: #ffffff;
+    background-color: #a87b62;
+    border: 1px solid transparent; }
+    .btn--brown:hover, .btn--brown:focus {
+      color: #1d1613;
+      background-color: #ffffff;
+      border: 1px solid #a87b62; }
+    .btn--brown:active {
+      opacity: 0.5; }
+  .btn--white {
+    border: 1px solid #a87b62; }
+    .btn--white:hover, .btn--white:focus {
+      color: #ffffff;
+      background-color: #a87b62;
+      border: 1px solid transparent; }
+    .btn--white:active {
+      opacity: 0.5; }
 
 .main-footer {
   display: -webkit-box;

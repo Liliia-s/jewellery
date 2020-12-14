@@ -1,0 +1,77 @@
+.js-head {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 10px;
+    background: url("../img/arrow-up.svg") no-repeat;
+
+    @media (max-width: $tablet-max-width) {
+      width: 40px;
+      height: 20px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 30px;
+      height: 15px;
+    }
+  }
+
+  &--faq::after {
+    top: 50px;
+    right: 50px;
+
+    @media (max-width: $desktop-max-width-2) {
+      right: 30px;
+    }
+
+    @media (max-width: $tablet-max-width) {
+      top: 47px;
+      right: 35px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      top: 23px;
+      right: 15px;
+    }
+  }
+
+  &--filter::after {
+    top: 30px;
+    right: 21px;
+  }
+
+  &--state {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $color-brown;
+    }
+  }
+
+
+  // FIXME: не применяется отступ 43px - его перебивает материнская стилизация
+  &--indents {
+    padding-bottom: 43px;
+
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 20px;
+    }
+  }
+
+  // &--arrow {
+  &--down {
+    &::after {
+      background: url("../img/arrow-down.svg") no-repeat;
+    }
+  }
+}
+
+.js-head__content {
+  &--hide {
+    display: none;
+  }
+}

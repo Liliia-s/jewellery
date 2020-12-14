@@ -1,39 +1,6 @@
 'use strict';
 
 (function () {
-  var faqAnswer = document.querySelectorAll('.faq__answer');
-  var faqQuestion = document.querySelectorAll('.faq__question');
-
-  var hideElements = function () {
-    for (var i = 0; i < faqAnswer.length; i++) {
-      faqAnswer[i].classList.toggle('faq__answer--hide');
-      faqAnswer[i].previousElementSibling.classList.toggle('faq__question--indents');
-      faqAnswer[i].previousElementSibling.classList.toggle('faq__question--arrow');
-    }
-  };
-
-  hideElements();
-
-  var toggleQuestion = function (evt) {
-    evt.preventDefault();
-    evt.target.classList.toggle('faq__question--indents');
-    evt.target.classList.toggle('faq__question--arrow');
-    evt.target.nextElementSibling.classList.toggle('faq__answer--hide');
-  };
-
-  var addListeners = function () {
-    for (var i = 0; i < faqQuestion.length; i++) {
-      faqQuestion[i].classList.add('faq__question--state');
-      faqQuestion[i].addEventListener('click', toggleQuestion);
-    }
-  };
-
-  addListeners();
-})();
-
-'use strict';
-
-(function () {
   var mainHeader = document.querySelector('.main-header');
   var search = mainHeader.querySelector('.main-header__search-wrapper');
   var mainNav = mainHeader.querySelector('.main-header__nav');
@@ -71,4 +38,37 @@
   };
 
   menuBtn.addEventListener('click', onMenuBtnClick);
+})();
+
+'use strict';
+
+(function () {
+  var jsHead = document.querySelectorAll('.js-head');
+  var jsHeadContent = document.querySelectorAll('.js-head__content');
+
+  var hideElements = function () {
+    for (var i = 0; i < jsHeadContent.length; i++) {
+      jsHeadContent[i].classList.toggle('js-head__content--hide');
+      jsHeadContent[i].previousElementSibling.classList.toggle('js-head--indents');
+      jsHeadContent[i].previousElementSibling.classList.toggle('js-head--down');
+    }
+  };
+
+  hideElements();
+
+  var toggleQuestion = function (evt) {
+    evt.preventDefault();
+    evt.target.classList.toggle('js-head--indents');
+    evt.target.classList.toggle('js-head--down');
+    evt.target.nextElementSibling.classList.toggle('js-head__content--hide');
+  };
+
+  var addListeners = function () {
+    for (var i = 0; i < jsHead.length; i++) {
+      jsHead[i].classList.add('js-head--state');
+      jsHead[i].addEventListener('click', toggleQuestion);
+    }
+  };
+
+  addListeners();
 })();

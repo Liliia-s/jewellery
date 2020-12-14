@@ -38,7 +38,7 @@
           <!-- <button class="main-header__search-button" type="submit">Найти</button> -->
         </form>
         <div class="main-header__button-wrapper">
-          <button class="main-header__button-menu" aria-label="Открыть меню сайта">
+          <button class="main-header__button-menu" type="button" aria-label="Открыть меню сайта">
             <svg class="main-header__button-icon">
               <use xlink:href="img/sprite.svg#icon-menu"></use>
             </svg>
@@ -104,9 +104,88 @@
       <div class="catalog__wrapper container">
         <div class="catalog__filter-wrapper">
           <form class="catalog__filter" method="get" action="https://echo.htmlacademy.ru">
+            <div class="catalog__filter-box">
+              <div class="catalog__fieldset-wrapper">
+                <fieldset class="catalog__filter-fieldset">
+                  <legend class="catalog__filter-legend js-head js-head--filter">Product</legend>
+                  <ul class="catalog__filter-checkbox">
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="necklaces" id="check-necklaces" checked="checked">
+                      <label class="catalog__filter-label" for="check-necklaces">Necklaces</label>
+                    </li>
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="chokers" id="check-chokers" checked="checked">
+                      <label class="catalog__filter-label" for="check-chokers">Chokers</label>
+                    </li>
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="rings" id="check-rings">
+                      <label class="catalog__filter-label" for="check-rings">Rings</label>
+                    </li>
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="earrings" id="check-earrings" checked="checked">
+                      <label class="catalog__filter-label" for="check-earrings">Earrings</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="catalog__fieldset-wrapper">
+                <fieldset class="catalog__filter-fieldset">
+                  <legend class="catalog__filter-legend js-head js-head--filter">Material</legend>
+                  <ul class="catalog__filter-checkbox js-head__content">
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="gold" id="check-gold" checked="checked">
+                      <label class="catalog__filter-label" for="check-gold">Gold</label>
+                    </li>
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="silver" id="check-silver">
+                      <label class="catalog__filter-label" for="check-silver">Silver</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="catalog__fieldset-wrapper">
+                <fieldset class="catalog__filter-fieldset">
+                  <legend class="catalog__filter-legend js-head js-head--filter">Collection</legend>
+                  <ul class="catalog__filter-checkbox js-head__content">
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="flamingo" id="check-flamingo">
+                      <label class="catalog__filter-label" for="check-flamingo">Pink Flamingo</label>
+                    </li>
+                    <li class="catalog__checkbox-item">
+                      <input class="catalog__filter-input visually-hidden" type="checkbox" name="dreams" id="check-dreams" checked="checked">
+                      <label class="catalog__filter-label" for="check-dreams">Dreams</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="catalog__fieldset-wrapper">
+                <fieldset class="catalog__filter-fieldset">
+                  <legend class="catalog__filter-legend js-head js-head--filter">Price</legend>
+                  <div class="catalog__filter-range">
+                    <div class="catalog__range-controls">
+                      <div class="catalog__range-scale">
+                        <div class="catalog__range-bar"></div>
+                      </div>
+                      <div class="catalog__range-toggle catalog__range-toggle--min"></div>
+                      <div class="catalog__range-toggle catalog__range-toggle--max"></div>
+                    </div>
+                    <div class="catalog__range-price">
+                      <div class="catalog__price-wrapper">
+                        <label class="catalog__price catalog__price--min">$
+                          <input type="text" name="min-price" value="55"></label>
+                      </div>
+                      <div class="catalog__price-wrapper">
+                        <label class="catalog__price catalog__price--max">$
+                          <input type="text" name="max-price" value="155"></label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
             <div class="catalog__button-wrapper">
-              <button class="catalog__filter-button catalog__filter--apply">Apply</button>
-              <button class="catalog__filter-button catalog__filter--clear">Clear All</button>
+              <button class="catalog__filter-button btn btn--brown" type="submit">Apply</button>
+              <button class="catalog__filter-button btn btn--white" type="button">Clear All</button>
             </div>
           </form>
         </div>
@@ -440,7 +519,7 @@
         </div>
       </div>
       <div class="catalog__pagination-wrapper">
-        <button>
+        <button type="button">
           Previous
         </button>
         <ul class="catalog__pagination-list pagination">
@@ -450,7 +529,7 @@
           <li class="pagination-item"><a href="" class="pagination-link">4</a></li>
           <li class="pagination-item"><a href="" class="pagination-link">5</a></li>
         </ul>
-        <button>
+        <button type="button">
           Next
         </button>
       </div>
