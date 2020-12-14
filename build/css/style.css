@@ -1320,9 +1320,19 @@ html {
   display: flex;
   padding-top: 80px;
   border-bottom: 1px solid #f6f5f4; }
+  @media (max-width: 1023px) {
+    .catalog__wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .catalog__filter-wrapper {
   width: 250px; }
+  @media (max-width: 1023px) {
+    .catalog__filter-wrapper {
+      width: 458px;
+      margin: 0 auto; } }
 
 .catalog__fieldset-wrapper {
   border: 1px solid #a87b62; }
@@ -1444,9 +1454,13 @@ html {
 
 .catalog__button-wrapper {
   padding-top: 36px; }
+  @media (max-width: 1023px) {
+    .catalog__button-wrapper {
+      padding-right: 40px;
+      padding-left: 40px; } }
 
 .catalog__filter-button {
-  width: 250px; }
+  width: 100%; }
   .catalog__filter-button:not(:last-child) {
     margin-bottom: 25px; }
 

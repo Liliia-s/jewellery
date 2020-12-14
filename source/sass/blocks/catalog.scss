@@ -2,10 +2,20 @@
   display: flex;
   padding-top: 80px;
   border-bottom: 1px solid $color-grey-light;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+  }
 }
 
 .catalog__filter-wrapper {
   width: 250px;
+
+  @media (max-width: $tablet-max-width) {
+    // position: absolute;
+    width: 458px;
+    margin: 0 auto;
+  }
 }
 
 .catalog__fieldset-wrapper {
@@ -163,10 +173,15 @@
 
 .catalog__button-wrapper {
   padding-top: 36px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 
 .catalog__filter-button {
-  width: 250px;
+  width: 100%;
 
   &:not(:last-child) {
     margin-bottom: 25px;
