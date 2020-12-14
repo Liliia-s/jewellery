@@ -41,6 +41,11 @@
   &--filter::after {
     top: 30px;
     right: 21px;
+
+    @media (max-width: $tablet-max-width) {
+      top: 37px;
+      right: 25px;
+    }
   }
 
   &--state {

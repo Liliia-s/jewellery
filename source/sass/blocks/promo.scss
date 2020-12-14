@@ -44,10 +44,12 @@
     padding-top: 92px;
     padding-bottom: 97px;
     background: url("../img/back-desk-catalog.jpg") no-repeat;
+    background-size: cover;
 
     @media (max-width: $tablet-max-width) {
       background: url("../img/back-tab-catalog.jpg") no-repeat;
       background-size: cover;
+      padding-bottom: 92px;
     }
 
     // @media (max-width: $mobile-max-width) {
