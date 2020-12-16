@@ -1,19 +1,23 @@
 .product-card {
   width: 270px;
 
-  @media (max-width: $desktop-max-width-2) {
-    width: 100%;
+  @media (max-width: $tablet-max-width) {
+    width: 324px;
   }
 
-  // @media (max-width: $mobile-max-width) {
-  //   width: 130px;
-  // }
+  @media (max-width: $mobile-max-width) {
+    width: 130px;
+  }
 
-  // &--catalog {
-  //   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-  //     width: 206px;
-  //   }
-  // }
+  &--catalog {
+    @media (max-width: $desktop-max-width-2) {
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+  }
 }
 
 .product-card a {

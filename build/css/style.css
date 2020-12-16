@@ -925,8 +925,17 @@ html {
 
 .product-card {
   width: 270px; }
-  @media (max-width: 1365px) {
+  @media (max-width: 1023px) {
     .product-card {
+      width: 324px; } }
+  @media (max-width: 767px) {
+    .product-card {
+      width: 130px; } }
+  @media (max-width: 1365px) {
+    .product-card--catalog {
+      width: 100%; } }
+  @media (max-width: 767px) {
+    .product-card--catalog {
       width: 100%; } }
 
 .product-card a:hover, .product-card a:focus {
