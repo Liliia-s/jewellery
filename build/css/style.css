@@ -285,24 +285,6 @@ html {
     .container {
       padding: 0 15px; } }
 
-@media (min-width: 1366px) and (max-width: 1366px) {
-  body {
-    background: url("../img/desk-catalog.jpg") no-repeat;
-    min-height: 4066px;
-    opacity: 0.2; } }
-
-@media (min-width: 768px) and (max-width: 768px) {
-  body {
-    background: url("../img/tab-catalog.jpg") no-repeat 50% 0;
-    min-height: 4047px;
-    opacity: 0.2; } }
-
-@media (max-width: 320px) {
-  body {
-    background: url("../img/mob-catalog.jpg") no-repeat 50% 0;
-    min-height: 4869px;
-    opacity: 0.2; } }
-
 @media (max-width: 1023px) {
   .main-header {
     position: relative;
@@ -1749,6 +1731,119 @@ html {
   @media (max-width: 1023px) {
     .overlay--show {
       display: block; } }
+
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 767px) {
+    .product-info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.product-info__photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%; }
+
+.product-info__desc {
+  width: 40%; }
+
+.product-info__desc h2,
+.product-info__desc p {
+  margin: 0; }
+
+.product-info__desc h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", "Georgia", serif;
+  font-size: 34px;
+  line-height: 44.2px;
+  font-weight: 700; }
+
+.product-info__desc > p {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33.8px; }
+
+.product-info__photos-list,
+.product-info__table-names,
+.product-info__desc-list,
+.product-info__advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.product-info__table-names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.product-info__table-names li {
+  padding-right: 35px; }
+  @media (max-width: 767px) {
+    .product-info__table-names li {
+      padding-right: 38px; } }
+
+.product-info__table {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  border-collapse: collapse; }
+
+.product-info__table-name a {
+  color: #1d1613; }
+  .product-info__table-name a:hover, .product-info__table-name a:focus {
+    color: rgba(29, 22, 19, 0.5); }
+  .product-info__table-name a:active {
+    color: rgba(29, 22, 19, 0.3); }
+
+.product-info__table-name .product-info__table-link--active {
+  color: #9b9997; }
+
+.product-info__table-body tr {
+  border-bottom: 1px solid #f6f5f4; }
+
+.product-info__row th,
+.product-info__row td {
+  font-size: 14px;
+  line-height: 18.2px; }
+
+.product-info__row th {
+  font-weight: 500; }
+
+.product-info__row td {
+  font-weight: 400;
+  text-align: right; }
+
+.product-info__advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.product-info__advantages-list li {
+  font-size: 14px;
+  line-height: 18.2px;
+  color: #9b9997; }
+  .product-info__advantages-list li:not(:first-child) {
+    padding-left: 14px; }
+    @media (max-width: 1023px) {
+      .product-info__advantages-list li:not(:first-child) {
+        padding-left: 12px; } }
+    @media (max-width: 767px) {
+      .product-info__advantages-list li:not(:first-child) {
+        padding-left: 28px; } }
+  .product-info__advantages-list li:not(:last-child) {
+    padding-right: 13px;
+    border-right: 1px solid #f6f5f4; }
+    @media (max-width: 1023px) {
+      .product-info__advantages-list li:not(:last-child) {
+        padding-right: 12px; } }
+    @media (max-width: 767px) {
+      .product-info__advantages-list li:not(:last-child) {
+        padding-right: 28px; } }
 
 .main-footer {
   display: -webkit-box;

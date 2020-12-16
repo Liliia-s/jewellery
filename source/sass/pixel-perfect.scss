@@ -23,26 +23,52 @@
 
 // ----CATALOG-----------------------------------
 
-body {
-  @media (min-width: $desktop-max-width) and (max-width: 1366px) {
-    background: url("../img/desk-catalog.jpg") no-repeat;
-    min-height: 4066px;
-    opacity: 0.2;
-  }
+// body {
+//   @media (min-width: $desktop-max-width) and (max-width: 1366px) {
+//     background: url("../img/desk-catalog.jpg") no-repeat;
+//     min-height: 4066px;
+//     opacity: 0.2;
+//   }
 
-  @media (min-width: $tablet-width) and (max-width: 768px) {
-    // background: url("../img/tab-menu.jpg") no-repeat;
-    background: url("../img/tab-catalog.jpg") no-repeat 50% 0;
-    // background: url("../img/menu-tab.png") no-repeat 140px 410px;
-    min-height: 4047px;
-    opacity: 0.2;
-  }
+//   @media (min-width: $tablet-width) and (max-width: 768px) {
+//     // background: url("../img/tab-menu.jpg") no-repeat;
+//     background: url("../img/tab-catalog.jpg") no-repeat 50% 0;
+//     // background: url("../img/menu-tab.png") no-repeat 140px 410px;
+//     min-height: 4047px;
+//     opacity: 0.2;
+//   }
 
-  @media (max-width: 320px) {
-    background: url("../img/mob-catalog.jpg") no-repeat 50% 0;
-    // background: url("../img/mob-menu.jpg") no-repeat;
-    min-height: 4869px;
-    // min-height: 4472px;
-    opacity: 0.2;
-  }
-}
+//   @media (max-width: 320px) {
+//     background: url("../img/mob-catalog.jpg") no-repeat 50% 0;
+//     // background: url("../img/mob-menu.jpg") no-repeat;
+//     min-height: 4869px;
+//     // min-height: 4472px;
+//     opacity: 0.2;
+//   }
+// }
+
+// ----PRODUCT-----------------------------------
+
+// body {
+//   @media (min-width: $desktop-max-width) and (max-width: 1366px) {
+//     background: url("../img/desk-product.jpg") no-repeat;
+//     min-height: 4066px;
+//     opacity: 0.2;
+//   }
+
+//   @media (min-width: $tablet-width) and (max-width: 768px) {
+//     // background: url("../img/tab-menu.jpg") no-repeat;
+//     background: url("../img/tab-product.jpg") no-repeat 50% 0;
+//     // background: url("../img/menu-tab.png") no-repeat 140px 410px;
+//     min-height: 4047px;
+//     opacity: 0.2;
+//   }
+
+//   @media (max-width: 320px) {
+//     background: url("../img/mob-product.jpg") no-repeat 50% 0;
+//     // background: url("../img/mob-menu.jpg") no-repeat;
+//     min-height: 4869px;
+//     // min-height: 4472px;
+//     opacity: 0.2;
+//   }
+// }

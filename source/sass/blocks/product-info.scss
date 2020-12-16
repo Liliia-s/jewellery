@@ -1,0 +1,144 @@
+.product-info {
+  display: flex;
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+  }
+}
+
+.product-info__photos {
+  display: flex;
+  width: 60%;
+}
+
+.product-info__desc {
+  width: 40%;
+}
+
+.product-info__desc h2,
+.product-info__desc p {
+  margin: 0;
+}
+
+.product-info__desc h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", "Georgia", serif;
+  font-size: 34px;
+  line-height: 44.2px;
+  font-weight: 700;
+}
+
+.product-info__desc > p {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33.8px;
+}
+
+.product-info__photos-list,
+.product-info__table-names,
+.product-info__desc-list,
+.product-info__advantages-list {
+  @include reset-list;
+}
+
+.product-info__table-names {
+  display: flex;
+}
+
+.product-info__table-names li {
+  padding-right: 35px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 38px;
+  }
+}
+
+.product-info__table {
+  @include reset-list;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-info__table-name a {
+  color: $color-black2;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-black2, 0.5);
+  }
+
+  &:active {
+    color: rgba($color-black2, 0.3);
+  }
+}
+
+.product-info__table-name .product-info__table-link {
+  // FIXME: убрать у открытой карточки тег link, чтобы не было состояний и cursor
+  &--active {
+    color: $color-grey;
+
+    // &:hover,
+    // &:focus {
+    //   color: $color-grey;
+    // }
+
+    // &:active {
+    //   color: $color-grey;
+    // }
+  }
+}
+
+.product-info__table-body tr {
+  // padding-bottom: 15px;
+  border-bottom: 1px solid $color-grey-light;
+}
+
+.product-info__row th,
+.product-info__row td {
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+.product-info__row th {
+  font-weight: 500;
+}
+
+.product-info__row td {
+  font-weight: 400;
+  text-align: right;
+}
+
+.product-info__advantages-list {
+  display: flex;
+}
+
+.product-info__advantages-list li {
+  font-size: 14px;
+  line-height: 18.2px;
+  color: $color-grey;
+
+  &:not(:first-child) {
+    padding-left: 14px;
+
+    @media (max-width: $tablet-max-width) {
+      padding-left: 12px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-left: 28px;
+    }
+  }
+
+  &:not(:last-child) {
+    padding-right: 13px;
+    border-right: 1px solid $color-grey-light;
+
+    @media (max-width: $tablet-max-width) {
+      padding-right: 12px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-right: 28px;
+    }
+  }
+}
+
