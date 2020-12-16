@@ -7,6 +7,10 @@
 .pagination li {
   &:not(:last-child) {
     margin-right: 13px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-right: 23px;
+    }
   }
 }
 
