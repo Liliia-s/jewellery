@@ -1,36 +1,44 @@
 .product-info {
   display: flex;
+  padding-top: 70px;
+  // padding-bottom: 120px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 22px;
+    // padding-bottom: 70px;
+  }
 
   @media (max-width: $mobile-max-width) {
     flex-direction: column;
+    padding-top: 0;
   }
 }
 
 .product-info__photos {
   display: flex;
-  width: 60%;
+  width: 52%;
+  padding-top: 10px;
+
+  @media (max-width: $desktop-max-width-2) {
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    width: 48%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: row;
+    width: 100%;
+    padding-top: 0;
+    overflow-x: scroll;
+  }
 }
 
-.product-info__desc {
-  width: 40%;
-}
-
-.product-info__desc h2,
-.product-info__desc p {
-  margin: 0;
-}
-
-.product-info__desc h2 {
-  font-family: "Cormorant Garamond", "Times New Roman", "Georgia", serif;
-  font-size: 34px;
-  line-height: 44.2px;
-  font-weight: 700;
-}
-
-.product-info__desc > p {
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 33.8px;
+.product-info__photos img {
+  width: auto;
 }
 
 .product-info__photos-list,
@@ -40,12 +48,90 @@
   @include reset-list;
 }
 
+.product-info__photos-main {
+  @media (max-width: $desktop-max-width-2) {
+    order: 1;
+    padding-bottom: 13px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 14px;
+    padding-bottom: 0;
+  }
+}
+
+.product-info__photos-list {
+  padding-right: 30px;
+
+  @media (max-width: $desktop-max-width-2) {
+    display: flex;
+    order: 2;
+    padding-right: 0;
+  }
+}
+
+.product-info__photos-list li {
+  &:not(:last-child) {
+    padding-bottom: 30px;
+
+    @media (max-width: $desktop-max-width-2) {
+      padding-bottom: 0;
+      padding-right: 14px;
+    }
+  }
+}
+
+.product-info__desc {
+  width: 39.5%;
+  padding-left: 92px;
+
+  @media (max-width: $desktop-max-width-2) {
+    width: 53.5%;
+    padding-left: 40px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    padding-top: 41px;
+    padding-left: 0;
+  }
+}
+
+.product-info__desc h2,
+.product-info__desc p {
+  margin: 0;
+}
+
+.product-info__desc h2 {
+  padding-bottom: 12px;
+  font-family: "Cormorant Garamond", "Times New Roman", "Georgia", serif;
+  font-size: 34px;
+  line-height: 44.2px;
+  font-weight: 700;
+}
+
+.product-info__desc > p {
+  &:first-of-type {
+    padding-bottom: 39px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 33.8px;
+
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 29px;
+    }
+  }
+}
+
 .product-info__table-names {
   display: flex;
+  padding-bottom: 22px;
 }
 
 .product-info__table-names li {
-  padding-right: 35px;
+  &:not(:last-child) {
+    padding-right: 35px;
+  }
 
   @media (max-width: $mobile-max-width) {
     padding-right: 38px;
@@ -87,6 +173,14 @@
   }
 }
 
+.product-info__desc-list {
+  padding-bottom: 50px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 40px;
+  }
+}
+
 .product-info__table-body tr {
   // padding-bottom: 15px;
   border-bottom: 1px solid $color-grey-light;
@@ -94,6 +188,8 @@
 
 .product-info__row th,
 .product-info__row td {
+  width: 50%;
+  padding: 10px 0;
   font-size: 14px;
   line-height: 18.2px;
 }
@@ -107,14 +203,36 @@
   text-align: right;
 }
 
+.product-info__button {
+  margin-bottom: 16px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 13px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 11px;
+  }
+}
+
 .product-info__advantages-list {
   display: flex;
+  justify-content: center;
 }
 
 .product-info__advantages-list li {
   font-size: 14px;
   line-height: 18.2px;
   color: $color-grey;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 12px;
+    line-height: 15.6px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    text-align: center;
+  }
 
   &:not(:first-child) {
     padding-left: 14px;
@@ -133,12 +251,23 @@
     border-right: 1px solid $color-grey-light;
 
     @media (max-width: $tablet-max-width) {
-      padding-right: 12px;
+      padding-right: 11px;
     }
 
     @media (max-width: $mobile-max-width) {
       padding-right: 28px;
     }
   }
-}
 
+  &:last-child {
+    @media (max-width: $mobile-max-width) {
+      padding-right: 10px;
+    }
+  }
+
+  &:first-child {
+    @media (max-width: $mobile-max-width) {
+      padding-left: 10px;
+    }
+  }
+}

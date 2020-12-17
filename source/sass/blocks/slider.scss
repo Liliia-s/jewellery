@@ -1,3 +1,13 @@
+.slider {
+  padding-top: 120px;
+  padding-bottom: 126px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
 .slider__header-wrapper {
   display: flex;
   justify-content: space-between;
