@@ -1,0 +1,15 @@
+.btn-close {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 20px;
+  width: 14px;
+  height: 14px;
+  background: url("../img/modal-login-close.svg") no-repeat;
+  border: none;
+
+  @media (max-width: $mobile-max-width) {
+    top: 15px;
+    right: 15px;
+  }
+}

@@ -55,7 +55,7 @@
           <ul class="main-header__user-list">
             <li class="main-header__user-item main-header__user-item--login">
               <!-- TODO: проставить ссылки; у логина своя страница -->
-              <a href="">Login</a></li>
+              <a class="main-header__user-login" href="login.html">Login</a></li>
             <li class="main-header__user-item main-header__user-item--basket">
               <a class="main-header__user-link" href="">
                 <span>Cart 0</span>
@@ -226,7 +226,7 @@
     </section>
     <section class="container slider">
       <div class="slider__header-wrapper">
-        <button class="slider__btn slider__btn--left" type="button">
+        <button class="slider__btn slider__btn--left" type="button" aria-label="Предыдущий слайд">
           <svg>
             <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
           </svg>
@@ -235,7 +235,7 @@
           <h2>You May Also Like</h2>
           <a href="catalog.html">Shop Now</a>
         </div>
-        <button class="slider__btn slider__btn--right" type="button">
+        <button class="slider__btn slider__btn--right" type="button" aria-label="Следующий слайд">
           <svg>
             <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
           </svg>
@@ -528,7 +528,76 @@
     </div>
     <!-- </div> -->
   </footer>
+  <form class="form-login" method="get" action="https://echo.htmlacademy.ru">
+    <button class="btn-close form-login__btn-close" type="button" aria-label="Закрыть окно"></button>
+    <p class="form-login__title">Log In</p>
+    <ul class="form-login__list">
+      <li class="form-login__item">
+        <label for="" class="visually-hidden">Введите свой e-mail для входа</label>
+        <input type="text" id="field-login" name="login" placeholder="Your E-mail">
+      </li>
+      <li class="form-login__item">
+        <label for="" class="visually-hidden">Введите свой пароль от аккаунта</label>
+        <input type="password" id="field-password" name="password" placeholder="Password">
+        <a href="" class="form-login__password-forgot">Forgot your password?</a>
+      </li>
+    </ul>
+    <button class="form-login__btn-enter btn btn--brown" type="submit">Log In</button>
+    <div class="form-login__wrapper">
+      <p class="form-login__account">Don’t have an account?</p>
+      <a href="" class="form-login__sign-up">Sign up</a>
+    </div>
+  </form>
+  <div class="modal-cart">
+    <div class="modal-cart__wrapper modal-cart__wrapper--product">
+      <button class="btn-close modal-cart__btn-close" type="button" aria-label="Закрыть окно"></button>
+      <p>The item was added to your cart</p>
+      <div class="modal-cart__product-wrapper">
+        <div class="modal-cart__product">
+          <div class="modal-cart__product-img">
+            <picture>
+              <!-- 1х: 84px; 2x: 168px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/necklace-detail-desk.webp 1x, img/necklace-detail-desk@2x.webp 2x">
+              <!-- 1х: 88px; 2x: 176px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/necklace-detail-tab.webp 1x, img/necklace-detail-tab@2x.webp 2x">
+              <!-- 1х: 70px; 2x: 140px -->
+              <source type="image/webp" srcset="img/necklace-detail-mob.webp 1x, img/necklace-detail-mob@2x.webp 2x">
 
+              <!-- 1х: 84px; 2x: 168px -->
+              <source media="(min-width: 1024px)" srcset="img/necklace-detail-desk.jpg 1x, img/necklace-detail-desk@2x.jpg 2x">
+              <!-- 1х: 88px; 2x: 176px -->
+              <source media="(min-width: 768px)" srcset="img/necklace-detail-tab.jpg 1x, img/necklace-detail-tab@2x.jpg 2x">
+              <!-- 1х: 70px; 2x: 140px -->
+              <img src="img/necklace-detail-mob.jpg" srcset="img/necklace-detail-mob@2x.jpg 2x" alt="Photo Necklace Detail">
+            </picture>
+          </div>
+          <div class="modal-cart__product-info">
+            <p>Gold Necklace</p>
+            <p>$ 115</p>
+          </div>
+        </div>
+        <div class="modal-cart__amount">
+          <button class="modal-cart__amount-plus" type="button" aria-label="Уменьшить количество товара"></button>
+          <p>1</p>
+          <button class="modal-cart__amount-minus" type="button" aria-label="Увеличить количество товара"></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-cart__wrapper">
+      <div class="modal-cart__total-wrapper">
+        <p>You have 1 item in the cart</p>
+        <p>Cart subtotal: $ 115</p>
+      </div>
+      <div class="modal-cart__buttons-wrapper">
+        <div class="modal-cart__button-wrapper">
+          <a href="#" class="modal-cart__button--continue btn btn--white">Continue shopping</a>
+        </div>
+        <div class="modal-cart__button-wrapper">
+          <a href="#" class="btn btn--brown">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="overlay"></div>
   <script src="js/main.js"></script>
 </body>

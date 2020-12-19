@@ -1,20 +1,25 @@
 // body {
 //   @media (min-width: $desktop-max-width) and (max-width: 1366px) {
-//     background: url("../img/desk-index.jpg") no-repeat;
-//     min-height: 4066px;
+//     // background: url("../img/desk-index.jpg") no-repeat;
+//     // background: url("../img/login-desk.jpg") -32px 4132px no-repeat;
+//     background: url("../img/modal-cart-desk.png") -32px 4132px no-repeat;
+//     min-height: 4322px;
 //     opacity: 0.2;
 //   }
 
 //   @media (min-width: $tablet-width) and (max-width: 768px) {
 //     // background: url("../img/tab-menu.jpg") no-repeat;
-//     background: url("../img/tab-index.jpg") no-repeat;
+//     // background: url("../img/tab-index.jpg") no-repeat;
+//     // background: url("../img/login-tab.jpg") -32px 4152px no-repeat;
+//     background: url("../img/modal-cart-tab.png") -32px 4152px no-repeat;
 //     min-height: 4047px;
 //     opacity: 0.2;
 //   }
 
 //   @media (max-width: 320px) {
-//     background: url("../img/mob-index.jpg") no-repeat;
+//     // background: url("../img/mob-index.jpg") no-repeat;
 //     // background: url("../img/mob-menu.jpg") no-repeat;
+//     background: url("../img/modal-cart-mob.png") -15px 4875px no-repeat;
 //     min-height: 4869px;
 //     // min-height: 4472px;
 //     opacity: 0.2;

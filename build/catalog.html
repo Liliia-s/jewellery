@@ -55,7 +55,7 @@
           <ul class="main-header__user-list">
             <li class="main-header__user-item main-header__user-item--login">
               <!-- TODO: проставить ссылки; у логина своя страница -->
-              <a href="">Login</a></li>
+              <a class="main-header__user-login" href="login.html">Login</a></li>
             <li class="main-header__user-item main-header__user-item--basket">
               <a class="main-header__user-link" href="">
                 <span>Cart 0</span>
@@ -106,7 +106,7 @@
           <button class="catalog__filter-button btn btn--brown" type="button">Filter</button>
           <div class="catalog__filter-wrapper">
             <form class="catalog__filter" method="get" action="https://echo.htmlacademy.ru">
-              <button class="catalog__button-close" type="button"></button>
+              <button class="catalog__button-close" type="button" aria-label="Закрыть окно"></button>
               <div class="catalog__filter-box">
                 <div class="catalog__fieldset-wrapper">
                   <fieldset class="catalog__filter-fieldset">
@@ -524,7 +524,7 @@
       </div>
       <div class="catalog__pagination-wrapper container">
         <div class="catalog__pagination">
-          <button type="button">
+          <button type="button" aria-label="Предыдущая страница">
             Previous
           </button>
           <ul class="catalog__pagination-list pagination">
@@ -534,7 +534,7 @@
             <li class="pagination-item"><a href="" class="pagination-link">4</a></li>
             <li class="pagination-item"><a href="" class="pagination-link">5</a></li>
           </ul>
-          <button type="button">
+          <button type="button" aria-label="Следующая страница">
             Next
           </button>
         </div>
@@ -596,7 +596,26 @@
     </div>
     <!-- </div> -->
   </footer>
-
+  <form class="form-login" method="get" action="https://echo.htmlacademy.ru">
+    <button class="btn-close form-login__btn-close" aria-label="Закрыть окно"></button>
+    <p class="form-login__title">Log In</p>
+    <ul class="form-login__list">
+      <li class="form-login__item">
+        <label for="" class="visually-hidden">Введите свой e-mail для входа</label>
+        <input type="text" id="field-login" name="login" placeholder="Your E-mail">
+      </li>
+      <li class="form-login__item">
+        <label for="" class="visually-hidden">Введите свой пароль от аккаунта</label>
+        <input type="password" id="field-password" name="password" placeholder="Password">
+        <a href="" class="form-login__password-forgot">Forgot your password?</a>
+      </li>
+    </ul>
+    <button class="form-login__btn-enter btn btn--brown" type="submit">Log In</button>
+    <div class="form-login__wrapper">
+      <p class="form-login__account">Don’t have an account?</p>
+      <a href="" class="form-login__sign-up">Sign up</a>
+    </div>
+  </form>
   <div class="overlay"></div>
   <script src="js/main.js"></script>
 </body>

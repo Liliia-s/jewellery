@@ -55,7 +55,7 @@
           <ul class="main-header__user-list">
             <li class="main-header__user-item main-header__user-item--login">
               <!-- TODO: проставить ссылки; у логина своя страница -->
-              <a href="">Login</a></li>
+              <a class="main-header__user-login" href="login.html">Login</a></li>
             <li class="main-header__user-item main-header__user-item--basket">
               <a class="main-header__user-link" href="">
                 <span>Cart 0</span>
@@ -101,7 +101,7 @@
     </section>
     <section class="new container slider">
       <div class="slider__header-wrapper">
-        <button class="slider__btn slider__btn--left" type="button">
+        <button class="slider__btn slider__btn--left" type="button" aria-label="Предыдущий слайд">
           <svg>
             <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
           </svg>
@@ -110,7 +110,7 @@
           <h2>New In</h2>
           <a href="catalog.html">Shop Now</a>
         </div>
-        <button class="slider__btn slider__btn--right" type="button">
+        <button class="slider__btn slider__btn--right" type="button" aria-label="Следующий слайд">
           <svg>
             <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
           </svg>
@@ -446,7 +446,8 @@
             <!-- 1х: 133px; 2x: 266px -->
             <source media="(min-width: 768px)" srcset="img/insta02-tab.jpg 1x, img/insta02-tab@2x.jpg 2x">
             <!-- 1х: 130px; 2x: 260px -->
-            <img src="img/insta02-mob.jpg" srcset="img/insta02-mob@2x.jpg 2x" alt="Photo Insta 02"></picture>
+            <img src="img/insta02-mob.jpg" srcset="img/insta02-mob@2x.jpg 2x" alt="Photo Insta 02">
+          </picture>
         </li>
         <li class="insta__item insta__item--03">
           <picture>
@@ -462,7 +463,8 @@
             <!-- 1х: 133px; 2x: 266px -->
             <source media="(min-width: 768px)" srcset="img/insta03-tab.jpg 1x, img/insta03-tab@2x.jpg 2x">
             <!-- 1х: 130px; 2x: 260px -->
-            <img src="img/insta03-mob.jpg" srcset="img/insta03-mob@2x.jpg 2x" alt="Photo Insta 03"></picture>
+            <img src="img/insta03-mob.jpg" srcset="img/insta03-mob@2x.jpg 2x" alt="Photo Insta 03">
+          </picture>
         </li>
         <li class="insta__item insta__item--04">
           <picture>
@@ -478,7 +480,8 @@
             <!-- 1х: 133px; 2x: 266px -->
             <source media="(min-width: 768px)" srcset="img/insta04-tab.jpg 1x, img/insta04-tab@2x.jpg 2x">
             <!-- 1х: 130px; 2x: 260px -->
-            <img src="img/insta04-mob.jpg" srcset="img/insta04-mob@2x.jpg 2x" alt="Photo Insta 04"></picture>
+            <img src="img/insta04-mob.jpg" srcset="img/insta04-mob@2x.jpg 2x" alt="Photo Insta 04">
+          </picture>
         </li>
         <li class="insta__item insta__item--05">
           <picture>
@@ -494,7 +497,8 @@
             <!-- 1х: 133px; 2x: 266px -->
             <source media="(min-width: 768px)" srcset="img/insta05-tab.jpg 1x, img/insta05-tab@2x.jpg 2x">
             <!-- 1х: 130px; 2x: 260px -->
-            <img src="img/insta05-mob.jpg" srcset="img/insta05-mob@2x.jpg 2x" alt="Photo Insta 05"></picture>
+            <img src="img/insta05-mob.jpg" srcset="img/insta05-mob@2x.jpg 2x" alt="Photo Insta 05">
+          </picture>
         </li>
         <li class="insta__item insta__item--06">
           <picture>
@@ -510,7 +514,8 @@
             <!-- 1х: 133px; 2x: 266px -->
             <source media="(min-width: 768px)" srcset="img/insta06-tab.jpg 1x, img/insta06-tab@2x.jpg 2x">
             <!-- 1х: 130px; 2x: 260px -->
-            <img src="img/insta06-mob.jpg" srcset="img/insta06-mob@2x.jpg 2x" alt="Photo Insta 06"></picture>
+            <img src="img/insta06-mob.jpg" srcset="img/insta06-mob@2x.jpg 2x" alt="Photo Insta 06">
+          </picture>
         </li>
         <li class="insta__item insta__item--07">
           <picture>
@@ -526,7 +531,8 @@
             <!-- 1х: 133px; 2x: 266px -->
             <source media="(min-width: 768px)" srcset="img/insta07-tab.jpg 1x, img/insta07-tab@2x.jpg 2x">
             <!-- 1х: 130px; 2x: 260px -->
-            <img src="img/insta07-mob.jpg" srcset="img/insta07-mob@2x.jpg 2x" alt="Photo Insta 07"></picture>
+            <img src="img/insta07-mob.jpg" srcset="img/insta07-mob@2x.jpg 2x" alt="Photo Insta 07">
+          </picture>
         </li>
       </ul>
     </section>
@@ -586,7 +592,26 @@
     </div>
     <!-- </div> -->
   </footer>
-
+  <form class="form-login" method="get" action="https://echo.htmlacademy.ru">
+    <button class="btn-close form-login__btn-close" type="button" aria-label="Закрыть окно"></button>
+    <p class="form-login__title">Log In</p>
+    <ul class="form-login__list">
+      <li class="form-login__item">
+        <label for="" class="visually-hidden">Введите свой e-mail для входа</label>
+        <input type="text" id="field-login" name="login" placeholder="Your E-mail">
+      </li>
+      <li class="form-login__item">
+        <label for="" class="visually-hidden">Введите свой пароль от аккаунта</label>
+        <input type="password" id="field-password" name="password" placeholder="Password">
+        <a href="" class="form-login__password-forgot">Forgot your password?</a>
+      </li>
+    </ul>
+    <button class="form-login__btn-enter btn btn--brown" type="submit">Log In</button>
+    <div class="form-login__wrapper">
+      <p class="form-login__account">Don’t have an account?</p>
+      <a href="" class="form-login__sign-up">Sign up</a>
+    </div>
+  </form>
   <div class="overlay"></div>
   <script src="js/main.js"></script>
 </body>

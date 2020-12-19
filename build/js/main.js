@@ -2,49 +2,153 @@
 
 (function () {
   var KEY_CODE_ESC = 27;
+  var overlay = document.querySelector('.overlay');
+
+  // var modalEscKeydown = function (evt, callback) {
+  //   if (evt.keyCode === KEY_CODE_ESC) {
+  //     templateFunction(evt, callback);
+  //   }
+  // };
+
+  // var onOverlayClick = function (evt, callback) {
+  //   templateFunction(evt, callback);
+  // };
+
+  // var templateFunction = function (evt, callback) {
+  //   evt.preventDefault();
+  //   callback();
+  // };
+
+  window.util = {
+    KEY_CODE_ESC: KEY_CODE_ESC,
+    overlay: overlay,
+    // modalEscKeydown: modalEscKeydown,
+    // onOverlayClick: onOverlayClick
+  };
+})();
+
+'use strict';
+
+(function () {
+  var btnCard = document.querySelector('.product-info__button');
+  var btnModalClose = document.querySelector('.modal-cart__btn-close');
+  var modalCart = document.querySelector('.modal-cart');
+
+  var showModalCart = function () {
+    if (btnCard) {
+      modalCart.classList.add('modal-cart--show');
+      window.util.overlay.classList.add('overlay--show-all');
+      document.body.classList.add('overflow-hidden');
+    }
+  };
+
+  var hideModalCart = function () {
+    if (btnCard) {
+      modalCart.classList.remove('modal-cart--show');
+      window.util.overlay.classList.remove('overlay--show-all');
+      document.body.classList.remove('overflow-hidden');
+    }
+  };
+
+  var onBtnCardClick = function (evt) {
+    evt.preventDefault();
+    showModalCart();
+  };
+
+  var onBtnModalCloseClick = function (evt) {
+    evt.preventDefault();
+    hideModalCart();
+  };
+
+  var onOverlayClick = function (evt) {
+    evt.preventDefault();
+    hideModalCart();
+  };
+
+  var modalEscKeydown = function (evt) {
+    if (evt.keyCode === window.util.KEY_CODE_ESC) {
+      evt.preventDefault();
+      hideModalCart();
+    }
+  };
+
+  var setListenersOnBtnCard = function () {
+    if (btnCard) {
+      btnCard.addEventListener('click', onBtnCardClick);
+    }
+  };
+
+  setListenersOnBtnCard();
+
+  var setListenersOnModalClose = function () {
+    if (btnModalClose) {
+      btnModalClose.addEventListener('click', onBtnModalCloseClick);
+    }
+  };
+
+  setListenersOnModalClose();
+
+  window.util.overlay.addEventListener('click', onOverlayClick);
+  document.addEventListener('keydown', modalEscKeydown);
+})();
+
+'use strict';
+
+(function () {
   var catalogFilter = document.querySelector('.catalog__filter-wrapper');
   var catalogFilterButton = document.querySelector('.catalog__filter-button');
   var catalogFilterBox = document.querySelector('.catalog__filter-box');
   var catalogButtonClose = document.querySelector('.catalog__button-close');
-  var overlay = document.querySelector('.overlay');
 
   var hideFilter = function () {
     if (catalogFilter) {
-      catalogFilter.classList.toggle('catalog__filter-wrapper--hide');
-      catalogFilterButton.classList.toggle('catalog__filter-button--show');
+      catalogFilter.classList.add('catalog__filter-wrapper--hide');
+      catalogFilterButton.classList.add('catalog__filter-button--show');
     }
   };
 
   hideFilter();
 
-  var toggleStateElements = function () {
-    catalogFilter.classList.toggle('catalog__filter-wrapper--hide');
-    catalogFilter.classList.toggle('catalog__filter-wrapper--position');
-    catalogButtonClose.classList.toggle('catalog__button-close--show');
-    catalogFilterBox.classList.toggle('catalog__filter-box--clear');
-    overlay.classList.toggle('overlay--show');
+  var addStateElements = function () {
+    if (catalogFilter) {
+      catalogFilter.classList.remove('catalog__filter-wrapper--hide');
+      catalogFilter.classList.add('catalog__filter-wrapper--position');
+      catalogButtonClose.classList.add('catalog__button-close--show');
+      catalogFilterBox.classList.add('catalog__filter-box--clear');
+      window.util.overlay.classList.add('overlay--show');
+    }
+  };
+
+  var removeStateElements = function () {
+    if (catalogFilter) {
+      catalogFilter.classList.add('catalog__filter-wrapper--hide');
+      catalogFilter.classList.remove('catalog__filter-wrapper--position');
+      catalogButtonClose.classList.add('catalog__button-close--show');
+      catalogFilterBox.classList.remove('catalog__filter-box--clear');
+      window.util.overlay.classList.remove('overlay--show');
+    }
   };
 
   var onCatalogFilterButtonClick = function (evt) {
     evt.preventDefault();
-    toggleStateElements();
+    addStateElements();
   };
 
   var onCatalogButtonCloseClick = function (evt) {
     evt.preventDefault();
-    toggleStateElements();
+    removeStateElements();
   };
 
   var onOverlayClick = function (evt) {
     evt.preventDefault();
-    toggleStateElements();
+    removeStateElements();
   };
 
   var modalEscKeydown = function (evt) {
-    if (evt.keyCode === KEY_CODE_ESC) {
+    if (evt.keyCode === window.util.KEY_CODE_ESC) {
       evt.preventDefault();
       if (catalogFilter) {
-        toggleStateElements();
+        removeStateElements();
       }
     }
   };
@@ -58,7 +162,54 @@
 
   setListenersOnFilter();
 
-  overlay.addEventListener('click', onOverlayClick);
+  window.util.overlay.addEventListener('click', onOverlayClick);
+  document.addEventListener('keydown', modalEscKeydown);
+})();
+
+'use strict';
+
+(function () {
+  var loginLink = document.querySelector('.main-header__user-login');
+  var btnFormClose = document.querySelector('.form-login__btn-close');
+  var formLogin = document.querySelector('.form-login');
+
+  var showFormLogin = function () {
+    formLogin.classList.add('form-login--show');
+    window.util.overlay.classList.add('overlay--show-all');
+    document.body.classList.add('overflow-hidden');
+  };
+
+  var hideFormLogin = function () {
+    formLogin.classList.remove('form-login--show');
+    window.util.overlay.classList.remove('overlay--show-all');
+    document.body.classList.remove('overflow-hidden');
+  };
+
+  var onLoginClick = function (evt) {
+    evt.preventDefault();
+    showFormLogin();
+  };
+
+  var onBtnFormCloseClick = function (evt) {
+    evt.preventDefault();
+    hideFormLogin();
+  };
+
+  var onOverlayClick = function (evt) {
+    evt.preventDefault();
+    hideFormLogin();
+  };
+
+  var modalEscKeydown = function (evt) {
+    if (evt.keyCode === window.util.KEY_CODE_ESC) {
+      evt.preventDefault();
+      hideFormLogin();
+    }
+  };
+
+  loginLink.addEventListener('click', onLoginClick);
+  btnFormClose.addEventListener('click', onBtnFormCloseClick);
+  window.util.overlay.addEventListener('click', onOverlayClick);
   document.addEventListener('keydown', modalEscKeydown);
 })();
 

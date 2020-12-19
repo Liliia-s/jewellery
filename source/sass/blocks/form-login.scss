@@ -1,0 +1,145 @@
+.form-login {
+  position: relative;
+  display: none;
+  width: 430px;
+  padding: 138px 45px 54px;
+  background: url("../img/back-login-desk.jpg") $color-beige no-repeat;
+
+  @media (max-width: $tablet-max-width) {
+    width: 442px;
+    padding-right: 51px;
+    padding-left: 51px;
+    background-size: contain;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 270px;
+    padding: 84px 15px 39px 15px;
+  }
+
+  &--show {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 1000;
+    display: block;
+  }
+}
+
+.form-login__btn-close {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form-login p {
+  margin: 0;
+}
+
+.form-login > p:first-of-type {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-family: "Cormorant Garamond", "Times New Roman", "Georgia", serif;
+  font-size: 34px;
+  line-height: 44.2px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 38px;
+    padding-bottom: 18px;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+}
+
+.form-login__list {
+  @include reset-list;
+  padding-bottom: 45px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 35px;
+  }
+}
+
+.form-login__list li {
+  &:not(:last-child) {
+    padding-bottom: 27px;
+
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 22px;
+    }
+  }
+}
+
+.form-login__item input {
+  width: 100%;
+  padding: 10px 15px 9px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $color-black2;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: $color-grey;
+  }
+
+  &:hover::placeholder {
+    color: rgba($color-grey, 0.7);
+  }
+}
+
+.form-login__password-forgot {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding-top: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $color-grey;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-grey, 0.7);
+  }
+
+  &:active {
+    color: rgba($color-grey, 0.5);
+  }
+}
+
+.form-login__btn-enter {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-login__wrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form-login__wrapper p {
+  padding-right: 10px;
+  color: $color-grey;
+}
+
+.form-login__wrapper a {
+  color: $color-black2;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-black2, 0.7);
+  }
+
+  &:active {
+    color: rgba($color-black2, 0.5);
+  }
+}
