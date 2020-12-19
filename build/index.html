@@ -227,7 +227,7 @@
             </article>
           </li>
         </ul>
-        <ul class="slider__cards-list">
+        <ul class="slider__cards-list" style="display: none;">
           <li>
             <article class="product-card">
               <a href="" class="product-card__link">
@@ -392,19 +392,19 @@
       </div>
       <ul class="faq__list">
         <li class="faq__item">
-          <p class="faq__head js-head js-head--faq">What materials are the jewellery made of?</p>
+          <button class="faq__head js-head js-head--faq">What materials are the jewellery made of?</button>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faq__item">
-          <p class="faq__head js-head js-head--faq">Which countries do you deliver to?</p>
+          <button class="faq__head js-head js-head--faq">Which countries do you deliver to?</button>
           <p class="js-head__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faq__item">
-          <p class="faq__head js-head js-head--faq">What are the payment methods?</p>
+          <button class="faq__head js-head js-head--faq">What are the payment methods?</button>
           <p class="js-head__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faq__item">
-          <p class="faq__head js-head js-head--faq">Can I return the jewellery if it didn’t fit me?</p>
+          <button class="faq__head js-head js-head--faq">Can I return the jewellery if it didn’t fit me?</button>
           <p class="js-head__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
       </ul>
@@ -597,11 +597,11 @@
     <p class="form-login__title">Log In</p>
     <ul class="form-login__list">
       <li class="form-login__item">
-        <label for="" class="visually-hidden">Введите свой e-mail для входа</label>
+        <label for="field-login" class="visually-hidden">Введите свой e-mail для входа</label>
         <input type="text" id="field-login" name="login" placeholder="Your E-mail">
       </li>
       <li class="form-login__item">
-        <label for="" class="visually-hidden">Введите свой пароль от аккаунта</label>
+        <label for="field-password" class="visually-hidden">Введите свой пароль от аккаунта</label>
         <input type="password" id="field-password" name="password" placeholder="Password">
         <a href="" class="form-login__password-forgot">Forgot your password?</a>
       </li>
@@ -613,6 +613,7 @@
     </div>
   </form>
   <div class="overlay"></div>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 

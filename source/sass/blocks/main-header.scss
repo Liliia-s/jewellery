@@ -14,10 +14,6 @@
 
     &--indents {
       @media (max-width: $tablet-max-width) {
-        padding-bottom: 10px;
-      }
-
-      @media (max-width: $mobile-max-width) {
         padding-bottom: 0;
       }
     }
@@ -42,8 +38,9 @@
 
 .main-header__container {
   display: flex;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  align-items: center;
 
   @media (max-width: $tablet-max-width) {
     flex-wrap: wrap;
@@ -53,6 +50,7 @@
 
   @media (max-width: $mobile-max-width) {
     padding-top: 20px;
+    padding-bottom: 15px;
   }
 }
 
@@ -244,11 +242,6 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 13px;
-
-  @media (max-width: $tablet-max-width) {
-    padding-top: 0;
-  }
 }
 
 .main-header__user-list li {

@@ -60,7 +60,16 @@
       right: 0;
       z-index: 950;
       background-color: $color-white;
+
+      @media (max-width: $mobile-max-width) {
+        top: 40px;
+      }
     }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 270px;
+    padding-bottom: 30px;
   }
 }
 
@@ -115,10 +124,9 @@
   border: 0;
 }
 
-.catalog__filter-legend {
+.catalog__filter-head {
   width: 100%;
-  padding: 24px 40px 22px 25px;
-  font-weight: 500;
+  padding: 24px 40px 24px 25px;
 
   @media (max-width: $desktop-max-width-2) {
     font-size: 18px;
@@ -126,7 +134,7 @@
   }
 
   @media (max-width: $tablet-max-width) {
-    padding: 34px 63px 34px 39px;
+    padding: 24px 63px 25px 26px;
   }
 }
 
@@ -139,6 +147,11 @@
   @media (max-width: $tablet-max-width) {
     padding-bottom: 27px;
     padding-left: 49px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 26px;
+    padding-left: 36px;
   }
 }
 
@@ -189,7 +202,6 @@
   padding-left: 25px;
   font-size: 14px;
   line-height: 18.2px;
-  font-weight: 500;
   cursor: pointer;
 
   @media (max-width: $desktop-max-width-2) {
@@ -204,6 +216,10 @@
 
   @media (max-width: $tablet-max-width) {
     padding: 0 88px 34px 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 8px 10px 4px 10px;
   }
 }
 
@@ -228,7 +244,11 @@
   background-color: $color-brown;
 
   @media (max-width: $tablet-max-width) {
-    width: 158px;
+    width: 163px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 123px;
   }
 }
 
@@ -250,6 +270,10 @@
 
     @media (max-width: $tablet-max-width) {
       right: 64px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      right: 48px;
     }
   }
 
@@ -300,6 +324,12 @@
     padding-right: 40px;
     padding-left: 40px;
   }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .catalog__button {
@@ -307,6 +337,10 @@
 
   &:not(:last-child) {
     margin-bottom: 25px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 20px;
+    }
   }
 }
 
