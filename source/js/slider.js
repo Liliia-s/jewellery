@@ -26,19 +26,19 @@
 
   // toggleSwiper();
 
-  var swiper = new Swiper('.slider__cards-wrapper', {
-    slidesPerView: 3,
-    // spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: '.slider__pagination-list',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.slider__btn--left',
-      prevEl: '.slider__btn--right',
-    },
-  });
+  // var swiper = new Swiper('.slider__cards-wrapper', {
+  //   slidesPerView: 3,
+  //   // spaceBetween: 30,
+  //   slidesPerGroup: 3,
+  //   loop: true,
+  //   loopFillGroupWithBlank: true,
+  //   pagination: {
+  //     el: '.slider__pagination-list',
+  //     clickable: true,
+  //   },
+  //   navigation: {
+  //     nextEl: '.slider__btn--left',
+  //     prevEl: '.slider__btn--right',
+  //   },
+  // });
 })();

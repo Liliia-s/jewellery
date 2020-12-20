@@ -285,24 +285,6 @@ html {
     .container {
       padding: 0 15px; } }
 
-@media (min-width: 1366px) and (max-width: 1366px) {
-  body {
-    background: url("../img/desk-catalog.jpg") no-repeat;
-    min-height: 4066px;
-    opacity: 0.2; } }
-
-@media (min-width: 768px) and (max-width: 768px) {
-  body {
-    background: url("../img/tab-catalog.jpg") no-repeat 50% 0;
-    min-height: 4047px;
-    opacity: 0.2; } }
-
-@media (max-width: 320px) {
-  body {
-    background: url("../img/filter-mob.jpg") no-repeat 13% 9.3%;
-    min-height: 4869px;
-    opacity: 0.2; } }
-
 @media (max-width: 1023px) {
   .main-header {
     position: relative;
@@ -833,8 +815,7 @@ html {
 .slider__cards-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll; }
+  display: flex; }
 
 .slider ul {
   margin: 0;
@@ -2166,7 +2147,8 @@ html {
   width: 500px;
   padding-top: 48px;
   padding-bottom: 53px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  border: 1px solid #a87b62; }
   @media (max-width: 1023px) {
     .modal-cart {
       width: 502px; } }
