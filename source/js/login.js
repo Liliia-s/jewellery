@@ -4,11 +4,21 @@
   var loginLink = document.querySelector('.main-header__user-login');
   var btnFormClose = document.querySelector('.form-login__btn-close');
   var formLogin = document.querySelector('.form-login');
+  var login = document.querySelector('#field-email');
+  var password = document.querySelector('#field-password');
+  var storageEmail = '';
 
   var showFormLogin = function () {
     formLogin.classList.add('form-login--show');
     window.util.overlay.classList.add('overlay--show-all');
     document.body.classList.add('overflow-hidden');
+
+    if (localStorage.getItem('email') === true) {
+      login.value = storageEmail;
+      password.focus();
+    } else {
+      login.focus();
+    }
   };
 
   var hideFormLogin = function () {
