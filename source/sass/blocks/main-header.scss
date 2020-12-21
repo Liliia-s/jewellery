@@ -153,19 +153,12 @@
   }
 }
 
-// TODO:  в свободное время стилизовать кнопку, вот стили
-
-// .main-header__search-button {
-//   border: none;
-//   background-color: transparent;
-// }
-
 .main-header__button-wrapper {
   @media (max-width: $tablet-max-width) {
     width: 33%;
   }
 }
-// TODO: проставить миксину для кнопок и инпутов; цвет по-умолчанию прозрачный, если не задано иное
+
 .main-header__button-menu {
   display: none;
   width: 29px;

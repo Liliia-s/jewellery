@@ -30,6 +30,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    position: relative;
     flex-direction: row;
     width: 100%;
     padding-top: 0;
@@ -158,18 +159,9 @@
 }
 
 .product-info__table-name .product-info__table-link {
-  // FIXME: убрать у открытой карточки тег link, чтобы не было состояний и cursor
   &--active {
     color: $color-grey;
-
-    // &:hover,
-    // &:focus {
-    //   color: $color-grey;
-    // }
-
-    // &:active {
-    //   color: $color-grey;
-    // }
+    pointer-events: none;
   }
 }
 

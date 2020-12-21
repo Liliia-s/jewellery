@@ -2,6 +2,29 @@
   @include reset-list;
   display: flex;
   justify-content: center;
+
+  &--one {
+    @media (max-width: $mobile-max-width) {
+      display: none;
+    }
+  }
+
+  &--two {
+    display: none;
+
+    @media (max-width: $mobile-max-width) {
+      display: flex;
+    }
+  }
+
+  &--product {
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 18.2px;
+  }
 }
 
 .pagination li {
@@ -9,7 +32,15 @@
     margin-right: 13px;
 
     @media (max-width: $mobile-max-width) {
-      margin-right: 23px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.pagination--product li {
+  &:not(:last-child) {
+    @media (max-width: $mobile-max-width) {
+      margin-right: 5px;
     }
   }
 }
@@ -35,5 +66,13 @@
   &--active {
     color: $color-black2;
     cursor: default;
+  }
+}
+
+.pagination-item {
+  &--hide {
+    @media (min-width: $desktop-max-width) {
+      display: none;
+    }
   }
 }

@@ -1,5 +1,7 @@
 .product-card {
+  display: flex;
   width: 270px;
+  height: 100%;
 
   @media (max-width: $tablet-max-width) {
     width: 324px;
@@ -21,6 +23,19 @@
 }
 
 .product-card a {
+  border-bottom: 1px solid white;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $color-brown;
+  }
+
+  &:active {
+    border-bottom: 1px solid $color-brown;
+  }
+}
+
+.product-card--catalog a {
   &:hover,
   &:focus {
     box-shadow: 0 2px 10px 5px $color-brown;
@@ -40,7 +55,7 @@
   padding: 22px 10px;
 
   @media (max-width: $desktop-max-width-2) {
-    padding-top: 25px;
+    padding-top: 21px;
     padding-bottom: 25px;
   }
 

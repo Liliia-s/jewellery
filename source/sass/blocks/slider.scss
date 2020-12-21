@@ -1,10 +1,28 @@
 .slider {
   padding-top: 120px;
-  padding-bottom: 126px;
+  padding-bottom: 60px;
 
   @media (max-width: $tablet-max-width) {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 42px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 60px;
+    padding-bottom: 32px;
+  }
+
+  &--also-like {
+    padding-bottom: 126px;
+
+    @media (max-width: $tablet-max-width) {
+      padding-bottom: 75px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-top: 57px;
+      padding-bottom: 65px;
+    }
   }
 }
 
@@ -16,6 +34,11 @@
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 55px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    justify-content: center;
+    padding-bottom: 45px;
   }
 }
 
@@ -40,6 +63,10 @@
     height: 17px;
     padding-top: 7px;
   }
+
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
 }
 
 .slider__btn svg {
@@ -55,7 +82,7 @@
 
 .slider__cards-wrapper {
   display: flex;
-  // overflow-x: scroll;
+  overflow-x: scroll;
 }
 
 .slider ul {

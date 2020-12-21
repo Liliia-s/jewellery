@@ -1,17 +1,24 @@
 .main-footer {
-  display: flex;
   padding-top: 90px;
-  padding-bottom: 54px;
+  padding-bottom: 73px;
   background-color: $color-black;
 
   @media (max-width: $desktop-max-width-2) {
-    flex-direction: column;
     padding-top: 50px;
     padding-bottom: 33px;
   }
 
   @media (max-width: $mobile-max-width) {
     padding-bottom: 55px;
+  }
+}
+
+.main-footer__wrapper {
+  display: flex;
+  background-color: $color-black;
+
+  @media (max-width: $desktop-max-width-2) {
+    flex-direction: column;
   }
 }
 

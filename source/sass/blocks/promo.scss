@@ -1,6 +1,5 @@
 .promo {
   position: relative;
-  background-size: cover;
   z-index: -2;
 
   // TODO: У Оли спросить как сделать комбинацию, чтобы не ругался W3C - http://joxi.ru/82Q95DlI94yjO2?d=1 и если на фоне в макете есть прозрачность, то с ней сразу сохранять или ставить через css
@@ -24,6 +23,7 @@
     padding-top: 182px;
     padding-bottom: 179px;
     background: url("../img/back-desk.jpg") no-repeat;
+    background-size: cover;
 
     @media (min-width: $desktop-width) {
       filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
