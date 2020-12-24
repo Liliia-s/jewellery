@@ -29,7 +29,7 @@
       <div class="main-header__container container">
         <form class="main-header__search-wrapper" method="get" action="https://echo.htmlacademy.ru">
           <label class="visually-hidden" for="field-search">Введите поисковый запрос</label>
-          <input class="main-header__search" type="text" name="search" id="field-search" placeholder="Type here to search">
+          <input type="text" name="search" id="field-search" placeholder="Type here to search">
           <svg class="main-header__search-loupe">
             <use xlink:href="img/sprite.svg#icon-search"></use>
           </svg>
@@ -99,6 +99,7 @@
 
   <main>
     <section class="product-info container">
+      <h1 class="visually-hidden">Gold Necklace 585 Turquoise</h1>
       <div class="product-info__photos">
         <ul class="product-info__photos-list">
           <li class="product-info__photos-item">
@@ -370,7 +371,7 @@
         <p class="main-footer__subscription-desc">News and updates from CH. No spam, we promise.</p>
         <form class="main-footer__subscription-form" method="get" action="https://echo.htmlacademy.ru">
           <label class="visually-hidden" for="field-subscription">Введите e-mail</label>
-          <input class="main-footer__subscription-input" type="email" name="subscription" id="field-subscription" placeholder="Your E-mail">
+          <input type="email" name="subscription" id="field-subscription" placeholder="Your E-mail">
           <button class="main-footer__subscription-button" type="submit"><span>Sign Up</span>
             <svg class="main-footer__subscription-svg">
               <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
@@ -392,26 +393,38 @@
           <li class="main-footer__menu-item"><a href="#">Contact Us</a></li>
         </ul>
         <ul class="main-footer__menu-list main-footer__menu-list--social">
-          <li class="main-footer__menu-item"><a href="#" class="main-footer__social-link main-footer__social-link--fb">
+          <li class="main-footer__menu-item">
+            <a href="#" class="main-footer__social-link main-footer__social-link--fb">
               <svg>
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
-              <span>Facebook</span></a></li>
-          <li class="main-footer__menu-item"><a href="#" class="main-footer__social-link">
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="main-footer__menu-item">
+            <a href="#" class="main-footer__social-link">
               <svg>
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
-              <span>Instagram</span></a></li>
-          <li class="main-footer__menu-item"><a href="#" class="main-footer__social-link">
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li class="main-footer__menu-item">
+            <a href="#" class="main-footer__social-link">
               <svg>
                 <use xlink:href="img/sprite.svg#icon-pint"></use>
               </svg>
-              <span>Pinterest</span></a></li>
-          <li class="main-footer__menu-item"><a href="#" class="main-footer__social-link">
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li class="main-footer__menu-item">
+            <a href="#" class="main-footer__social-link">
               <svg>
                 <use xlink:href="img/sprite.svg#icon-tw"></use>
               </svg>
-              <span>Twitter</span></a></li>
+              <span>Twitter</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -478,10 +491,10 @@
       </div>
       <div class="modal-cart__buttons-wrapper">
         <div class="modal-cart__button-wrapper">
-          <a href="catalog.html" class="modal-cart__button--continue btn btn--white">Continue shopping</a>
+          <a href="catalog.html" class="modal-cart__button-continue btn btn--white">Continue shopping</a>
         </div>
         <div class="modal-cart__button-wrapper">
-          <a href="#" class="btn btn--brown">Checkout</a>
+          <a href="basket.html" class="btn btn--brown">Checkout</a>
         </div>
       </div>
     </div>

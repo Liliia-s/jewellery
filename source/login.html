@@ -23,27 +23,29 @@
   <link rel="preload" href="fonts/cormorantgaramond-semibold.woff" as="font" crossorigin="anonymous">
 </head>
 
-<main>
-  <form class="form-login form-login--show" method="get" action="https://echo.htmlacademy.ru">
-    <button class="btn-close form-login__btn-close" aria-label="Закрыть окно"></button>
-    <p class="form-login__title">Log In</p>
-    <ul class="form-login__list">
-      <li class="form-login__item">
-        <label for="field-login" class="visually-hidden">Введите свой e-mail для входа</label>
-        <input type="text" id="field-login" name="login" placeholder="Your E-mail">
-      </li>
-      <li class="form-login__item">
-        <label for="field-password" class="visually-hidden">Введите свой пароль от аккаунта</label>
-        <input type="password" id="field-password" name="password" placeholder="Password">
-        <a href="#" class="form-login__password-forgot">Forgot your password?</a>
-      </li>
-    </ul>
-    <button class="form-login__btn-enter btn btn--brown" type="submit">Log In</button>
-    <div class="form-login__wrapper">
-      <p class="form-login__account">Don’t have an account?</p>
-      <a href="#" class="form-login__sign-up">Sign up</a>
-    </div>
-  </form>
-</main>
+<body>
+  <main>
+    <form class="form-login form-login--show" method="get" action="https://echo.htmlacademy.ru">
+      <button class="btn-close form-login__btn-close" type="button" aria-label="Закрыть окно"></button>
+      <p class="form-login__title">Log In</p>
+      <ul class="form-login__list">
+        <li class="form-login__item">
+          <label for="field-login" class="visually-hidden">Введите свой e-mail для входа</label>
+          <input type="text" id="field-login" name="login" placeholder="Your E-mail">
+        </li>
+        <li class="form-login__item">
+          <label for="field-password" class="visually-hidden">Введите свой пароль от аккаунта</label>
+          <input type="password" id="field-password" name="password" placeholder="Password">
+          <a href="#" class="form-login__password-forgot">Forgot your password?</a>
+        </li>
+      </ul>
+      <button class="form-login__btn-enter btn btn--brown" type="submit">Log In</button>
+      <div class="form-login__wrapper">
+        <p class="form-login__account">Don’t have an account?</p>
+        <a href="#" class="form-login__sign-up">Sign up</a>
+      </div>
+    </form>
+  </main>
+</body>
 
 </html>
