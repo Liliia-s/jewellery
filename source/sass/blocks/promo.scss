@@ -19,6 +19,16 @@
     z-index: -1;
   }
 
+  &--menu-indents {
+    @media (max-width: $tablet-max-width) {
+      margin-top: 125px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-top: 92px;
+    }
+  }
+
   &--index {
     padding-top: 182px;
     padding-bottom: 179px;

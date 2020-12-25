@@ -672,6 +672,12 @@ html {
     height: 100%;
     background-color: rgba(86, 64, 52, 0.7);
     z-index: -1; }
+  @media (max-width: 1023px) {
+    .promo--menu-indents {
+      margin-top: 125px; } }
+  @media (max-width: 767px) {
+    .promo--menu-indents {
+      margin-top: 92px; } }
   .promo--index {
     padding-top: 182px;
     padding-bottom: 179px;
@@ -1243,17 +1249,20 @@ html {
       line-height: 22.4px; } }
 
 .faq__item p {
-  max-width: 565px;
+  max-width: 60%;
   margin: 0;
   padding-bottom: 43px;
   padding-left: 50px; }
+  @media (max-width: 1365px) {
+    .faq__item p {
+      max-width: 79%; } }
   @media (max-width: 1023px) {
     .faq__item p {
-      max-width: 585px;
+      max-width: 92%;
       padding-bottom: 45px; } }
   @media (max-width: 767px) {
     .faq__item p {
-      max-width: 233px;
+      max-width: 81%;
       padding-bottom: 24px;
       padding-left: 25px;
       font-size: 14px;

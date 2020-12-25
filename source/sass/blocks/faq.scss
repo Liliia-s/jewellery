@@ -53,18 +53,22 @@
 }
 
 .faq__item p {
-  max-width: 565px;
+  max-width: 60%;
   margin: 0;
   padding-bottom: 43px;
   padding-left: 50px;
 
+  @media (max-width: $desktop-max-width-2) {
+    max-width: 79%;
+  }
+
   @media (max-width: $tablet-max-width) {
-    max-width: 585px;
+    max-width: 92%;
     padding-bottom: 45px;
   }
 
   @media (max-width: $mobile-max-width) {
-    max-width: 233px;
+    max-width: 81%;
     padding-bottom: 24px;
     padding-left: 25px;
     font-size: 14px;

@@ -9,6 +9,7 @@
   var menuBtn = mainHeader.querySelector('.main-header__button-menu');
   var menuBtnIcon = mainHeader.querySelector('.main-header__button-icon');
   var menuBasketIcon = mainHeader.querySelector('.main-header__basket-svg');
+  var promo = document.querySelector('.promo');
 
   var changeElements = function () {
     mainHeader.classList.add('main-header--white');
@@ -35,6 +36,7 @@
     logo.classList.toggle('main-header__logo--gold');
     menuBtnIcon.classList.toggle('main-header__button-icon--black');
     menuBasketIcon.classList.toggle('main-header__basket-svg--black');
+    promo.classList.toggle('promo--menu-indents');
   };
 
   menuBtn.addEventListener('click', onMenuBtnClick);
