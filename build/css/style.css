@@ -429,19 +429,14 @@ html {
 .main-header__search-loupe {
   position: absolute;
   top: 16px;
-  left: 0;
-  width: 14px;
-  height: 14px; }
+  left: 0; }
   @media (max-width: 1023px) {
     .main-header__search-loupe {
       width: 16px;
       height: 16px;
       margin-top: -4px;
-      margin-left: 12px; } }
-
-@media (max-width: 1023px) {
-  .main-header__search-loupe svg {
-    fill: #ffffff; } }
+      margin-left: 12px;
+      fill: #ffffff; } }
 
 @media (max-width: 1023px) {
   .main-header__button-wrapper {
@@ -459,9 +454,8 @@ html {
       display: block; } }
 
 .main-header__button-icon {
-  width: 25px;
-  height: 18px;
-  stroke: #ffffff; }
+  stroke: #ffffff;
+  stroke-width: 2; }
   .main-header__button-icon--black {
     stroke: #000000; }
 
@@ -484,18 +478,17 @@ html {
 .main-header__logo-link--active:active svg {
   stroke: rgba(29, 22, 19, 0.3); }
 
-.main-header__logo {
-  width: 66px;
-  height: 66px; }
-  @media (max-width: 1023px) {
-    .main-header__logo {
-      stroke: #ffffff; } }
-  @media (max-width: 767px) {
-    .main-header__logo {
-      width: 52px;
-      height: 52px; } }
-  .main-header__logo--gold {
-    stroke: #a87b62; }
+@media (max-width: 1023px) {
+  .main-header__logo {
+    stroke: #ffffff; } }
+
+@media (max-width: 767px) {
+  .main-header__logo {
+    width: 52px;
+    height: 52px; } }
+
+.main-header__logo--gold {
+  stroke: #a87b62; }
 
 .main-header__user-wrapper {
   width: 33%;
@@ -578,10 +571,9 @@ html {
   @media (max-width: 1023px) {
     .main-header__basket-svg {
       display: block;
-      width: 20px;
-      height: 18px;
       fill: none;
-      stroke: #ffffff; }
+      stroke: #ffffff;
+      stroke-width: 2; }
       .main-header__basket-svg--black {
         stroke: #000000; } }
 
@@ -829,8 +821,6 @@ html {
       display: none; } }
 
 .slider__btn svg {
-  width: 30px;
-  height: 11px;
   stroke: #a87b62; }
   @media (max-width: 1023px) {
     .slider__btn svg {
@@ -2624,8 +2614,6 @@ html {
   padding-right: 10px; }
 
 .main-footer__subscription-svg {
-  width: 30px;
-  height: 11px;
   stroke: #ffffff; }
 
 .main-footer__menu {
@@ -2703,14 +2691,10 @@ html {
     fill: rgba(255, 255, 255, 0.3); }
 
 .main-footer__social-link svg {
-  width: 15px;
-  height: 15px;
   margin-right: 14px;
   fill: #ffffff; }
   @media (max-width: 767px) {
     .main-footer__social-link svg {
-      width: 20px;
-      height: 21px;
       margin-right: 30px; } }
 
 @media (max-width: 767px) {
@@ -2726,4 +2710,12 @@ html {
 
 @media (max-width: 767px) {
   .main-footer__social-link--fb svg {
-    width: 12px; } }
+    width: 12px;
+    height: 21px; }
+  .main-footer__social-link--insta svg,
+  .main-footer__social-link--pint svg {
+    width: 20px;
+    height: 21px; }
+  .main-footer__social-link--tw svg {
+    width: 20px;
+    height: 18px; } }

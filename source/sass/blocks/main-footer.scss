@@ -140,11 +140,8 @@
 }
 
 .main-footer__subscription-svg {
-  width: 30px;
-  height: 11px;
   stroke: $color-white;
 }
-
 
 .main-footer__menu {
   display: flex;
@@ -244,14 +241,10 @@
 }
 
 .main-footer__social-link svg {
-  width: 15px;
-  height: 15px;
   margin-right: 14px;
   fill: $color-white;
 
   @media (max-width: $mobile-max-width) {
-    width: 20px;
-    height: 21px;
     margin-right: 30px;
   }
 }
@@ -263,9 +256,21 @@
 }
 
 .main-footer__social-link {
-  &--fb svg {
-    @media (max-width: $mobile-max-width) {
+  @media (max-width: $mobile-max-width) {
+    &--fb svg {
       width: 12px;
+      height: 21px;
+    }
+
+    &--insta svg,
+    &--pint svg {
+      width: 20px;
+      height: 21px;
+    }
+
+    &--tw svg {
+      width: 20px;
+      height: 18px;
     }
   }
 }

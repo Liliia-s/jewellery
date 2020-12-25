@@ -42,7 +42,11 @@ gulp.task('images', function () {
       imagemin.mozjpeg({
         progressive: true
       }),
-      imagemin.svgo()
+      imagemin.svgo({
+        plugins: [
+          {removeDimensions: true}
+        ]
+      })
     ]))
     .pipe(gulp.dest('source/img'));
 });
@@ -66,12 +70,12 @@ gulp.task('sprite', function () {
 
 gulp.task('js', function () {
   return pipeline(
-      gulp.src(['source/js/lib-*.js']),
-      jsmerge('vendor.js'),
-      gulp.dest('build/js'),
-      gulp.src(['source/js/*.js', '!source/js/lib-*.js']),
-      jsmerge('main.js'),
-      gulp.dest('build/js')
+    gulp.src(['source/js/lib-*.js']),
+    jsmerge('vendor.js'),
+    gulp.dest('build/js'),
+    gulp.src(['source/js/*.js', '!source/js/lib-*.js']),
+    jsmerge('main.js'),
+    gulp.dest('build/js')
   );
 });
 

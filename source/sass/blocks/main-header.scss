@@ -136,19 +136,12 @@
   position: absolute;
   top: 16px;
   left: 0;
-  width: 14px;
-  height: 14px;
 
   @media (max-width: $tablet-max-width) {
     width: 16px;
     height: 16px;
     margin-top: -4px;
     margin-left: 12px;
-  }
-}
-
-.main-header__search-loupe svg {
-  @media (max-width: $tablet-max-width) {
     fill: $color-white;
   }
 }
@@ -175,9 +168,8 @@
 }
 
 .main-header__button-icon {
-  width: 25px;
-  height: 18px;
   stroke: $color-white;
+  stroke-width: 2;
 
   &--black {
     stroke: $color-black;
@@ -208,9 +200,6 @@
 }
 
 .main-header__logo {
-  width: 66px;
-  height: 66px;
-
   @media (max-width: $tablet-max-width) {
     stroke: $color-white;
   }
@@ -316,10 +305,9 @@
 
   @media (max-width: $tablet-max-width) {
     display: block;
-    width: 20px;
-    height: 18px;
     fill: none;
     stroke: $color-white;
+    stroke-width: 2;
 
     &--black {
       stroke: $color-black;
