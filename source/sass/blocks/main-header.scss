@@ -73,11 +73,6 @@
   }
 }
 
-
-// .main-header__search[type="text"] {
-//   color: $color-white;
-// }
-
 .main-header__search-wrapper input {
   width: 350px;
   height: 45px;
@@ -154,8 +149,6 @@
 
 .main-header__search-loupe svg {
   @media (max-width: $tablet-max-width) {
-    // width: 16px;
-    // height: 16px;
     fill: $color-white;
   }
 }
