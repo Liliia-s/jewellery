@@ -5,12 +5,12 @@
 @import "font-face";
 @import "blocks/visually-hidden";
 @import "blocks/container";
-@import "pixel-perfect";
+// @import "pixel-perfect";
 @import "blocks/main-header";
 @import "blocks/promo";
 @import "blocks/new";
 @import "blocks/slider";
-// @import "blocks/slider1";
+@import "libs/swiper";
 @import "blocks/pagination";
 @import "blocks/title";
 @import "blocks/product-card";
