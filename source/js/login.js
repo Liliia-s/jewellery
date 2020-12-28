@@ -21,6 +21,12 @@
     document.body.classList.remove('overflow-hidden');
   };
 
+  try {
+    storageEmail = localStorage.getItem('email');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
   var onLoginClick = function (evt) {
     evt.preventDefault();
     showFormLogin();
@@ -32,12 +38,6 @@
       login.focus();
     }
   };
-
-  try {
-    storageEmail = localStorage.getItem('email');
-  } catch (err) {
-    isStorageSupport = false;
-  }
 
   var onFormLoginSubmit = function () {
     if (isStorageSupport) {
