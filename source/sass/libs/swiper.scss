@@ -95,7 +95,10 @@
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-  overflow-x: scroll;
+
+  &--scroll {
+    overflow-x: scroll;
+  }
 }
 
 .swiper__container-android .swiper__slide,

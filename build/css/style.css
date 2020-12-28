@@ -779,14 +779,14 @@ html {
       padding-top: 60px;
       padding-bottom: 32px; } }
   .slider--also-like {
-    padding-bottom: 126px; }
+    margin-bottom: 116px; }
     @media (max-width: 1023px) {
       .slider--also-like {
-        padding-bottom: 75px; } }
+        margin-bottom: 72px; } }
     @media (max-width: 767px) {
       .slider--also-like {
-        padding-top: 57px;
-        padding-bottom: 65px; } }
+        margin-bottom: 70px;
+        padding-top: 57px; } }
 
 .slider__header-wrapper {
   display: -webkit-box;
@@ -913,8 +913,9 @@ html {
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  overflow-x: scroll; }
+          box-sizing: content-box; }
+  .swiper__wrapper--scroll {
+    overflow-x: scroll; }
 
 .swiper__container-android .swiper__slide,
 .swiper__wrapper {
