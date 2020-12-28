@@ -1874,7 +1874,7 @@ button.swiper__pagination-bullet {
       font-size: 14px;
       line-height: 19.6px; } }
 
-.js-head {
+.menu-accordion__btn {
   position: relative;
   width: 100%;
   font-weight: 500;
@@ -1882,51 +1882,51 @@ button.swiper__pagination-bullet {
   border: none;
   background-color: transparent;
   outline: none; }
-  .js-head::after {
+  .menu-accordion__btn::after {
     position: absolute;
     content: "";
     width: 15px;
     height: 8px;
     background: url("../img/arrow-up.svg") no-repeat; }
     @media (max-width: 1023px) {
-      .js-head::after {
+      .menu-accordion__btn::after {
         width: 23px;
         height: 15px; } }
-  .js-head--faq::after {
+  .menu-accordion__btn--faq::after {
     top: 50px;
     right: 50px; }
     @media (max-width: 1365px) {
-      .js-head--faq::after {
+      .menu-accordion__btn--faq::after {
         top: 49px;
         right: 49px; } }
     @media (max-width: 767px) {
-      .js-head--faq::after {
+      .menu-accordion__btn--faq::after {
         top: 23px;
         right: 22px; } }
-  .js-head--filter::after {
+  .menu-accordion__btn--filter::after {
     top: 30px;
     right: 21px; }
     @media (max-width: 1023px) {
-      .js-head--filter::after {
+      .menu-accordion__btn--filter::after {
         top: 37px;
         right: 25px; } }
     @media (max-width: 767px) {
-      .js-head--filter::after {
+      .menu-accordion__btn--filter::after {
         top: 30px;
         right: 13px; } }
-  .js-head--state {
+  .menu-accordion__btn--state {
     cursor: pointer; }
-    .js-head--state:hover, .js-head--state:focus {
+    .menu-accordion__btn--state:hover, .menu-accordion__btn--state:focus {
       color: #a87b62; }
-  .js-head--indents {
+  .menu-accordion__btn--indents {
     padding-bottom: 43px; }
     @media (max-width: 767px) {
-      .js-head--indents {
+      .menu-accordion__btn--indents {
         padding-bottom: 20px; } }
-  .js-head--down::after {
+  .menu-accordion__btn--down::after {
     background: url("../img/arrow-down.svg") no-repeat; }
 
-.js-head__content--hide {
+.menu-accordion__content--hide {
   display: none; }
 
 .insta {

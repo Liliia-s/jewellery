@@ -1,14 +1,14 @@
 'use strict';
 
 (function () {
-  var jsHead = document.querySelectorAll('.js-head');
-  var jsHeadContent = document.querySelectorAll('.js-head__content');
+  var jsHead = document.querySelectorAll('.menu-accordion__btn');
+  var jsHeadContent = document.querySelectorAll('.menu-accordion__content');
 
   var hideElements = function () {
     for (var i = 0; i < jsHeadContent.length; i++) {
-      jsHeadContent[i].classList.toggle('js-head__content--hide');
-      jsHeadContent[i].previousElementSibling.classList.toggle('js-head--indents');
-      jsHeadContent[i].previousElementSibling.classList.toggle('js-head--down');
+      jsHeadContent[i].classList.toggle('menu-accordion__content--hide');
+      jsHeadContent[i].previousElementSibling.classList.toggle('menu-accordion__btn--indents');
+      jsHeadContent[i].previousElementSibling.classList.toggle('menu-accordion__btn--down');
     }
   };
 
@@ -16,14 +16,14 @@
 
   var toggleQuestion = function (evt) {
     evt.preventDefault();
-    evt.target.classList.toggle('js-head--indents');
-    evt.target.classList.toggle('js-head--down');
-    evt.target.nextElementSibling.classList.toggle('js-head__content--hide');
+    evt.target.classList.toggle('menu-accordion__btn--indents');
+    evt.target.classList.toggle('menu-accordion__btn--down');
+    evt.target.nextElementSibling.classList.toggle('menu-accordion__content--hide');
   };
 
   var addListeners = function () {
     for (var i = 0; i < jsHead.length; i++) {
-      jsHead[i].classList.add('js-head--state');
+      jsHead[i].classList.add('menu-accordion__btn--state');
       jsHead[i].addEventListener('click', toggleQuestion);
     }
   };

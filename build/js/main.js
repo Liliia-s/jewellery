@@ -10739,14 +10739,14 @@ svg4everybody();
 'use strict';
 
 (function () {
-  var jsHead = document.querySelectorAll('.js-head');
-  var jsHeadContent = document.querySelectorAll('.js-head__content');
+  var jsHead = document.querySelectorAll('.menu-accordion__btn');
+  var jsHeadContent = document.querySelectorAll('.menu-accordion__content');
 
   var hideElements = function () {
     for (var i = 0; i < jsHeadContent.length; i++) {
-      jsHeadContent[i].classList.toggle('js-head__content--hide');
-      jsHeadContent[i].previousElementSibling.classList.toggle('js-head--indents');
-      jsHeadContent[i].previousElementSibling.classList.toggle('js-head--down');
+      jsHeadContent[i].classList.toggle('menu-accordion__content--hide');
+      jsHeadContent[i].previousElementSibling.classList.toggle('menu-accordion__btn--indents');
+      jsHeadContent[i].previousElementSibling.classList.toggle('menu-accordion__btn--down');
     }
   };
 
@@ -10754,14 +10754,14 @@ svg4everybody();
 
   var toggleQuestion = function (evt) {
     evt.preventDefault();
-    evt.target.classList.toggle('js-head--indents');
-    evt.target.classList.toggle('js-head--down');
-    evt.target.nextElementSibling.classList.toggle('js-head__content--hide');
+    evt.target.classList.toggle('menu-accordion__btn--indents');
+    evt.target.classList.toggle('menu-accordion__btn--down');
+    evt.target.nextElementSibling.classList.toggle('menu-accordion__content--hide');
   };
 
   var addListeners = function () {
     for (var i = 0; i < jsHead.length; i++) {
-      jsHead[i].classList.add('js-head--state');
+      jsHead[i].classList.add('menu-accordion__btn--state');
       jsHead[i].addEventListener('click', toggleQuestion);
     }
   };
@@ -10928,19 +10928,13 @@ svg4everybody();
   var formLogin = document.querySelector('.form-login');
   var login = document.querySelector('#field-email');
   var password = document.querySelector('#field-password');
-  login.value = localStorage.getItem('email') || '';
+  var isStorageSupport = true;
+  var storageEmail = '';
 
   var showFormLogin = function () {
     formLogin.classList.add('form-login--show');
     window.util.overlay.classList.add('overlay--show-all');
     document.body.classList.add('overflow-hidden');
-
-    if (localStorage.getItem('email') === true) {
-      localStorage.setItem('email', login.value);
-      password.focus();
-    } else {
-      login.focus();
-    }
   };
 
   var hideFormLogin = function () {
@@ -10952,6 +10946,25 @@ svg4everybody();
   var onLoginClick = function (evt) {
     evt.preventDefault();
     showFormLogin();
+
+    if (storageEmail) {
+      login.value = storageEmail;
+      password.focus();
+    } else {
+      login.focus();
+    }
+  };
+
+  try {
+    storageEmail = localStorage.getItem('email');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  var onFormLoginSubmit = function () {
+    if (isStorageSupport) {
+      localStorage.setItem('email', login.value);
+    }
   };
 
   var onBtnFormCloseClick = function (evt) {
@@ -10972,6 +10985,7 @@ svg4everybody();
   };
 
   loginLink.addEventListener('click', onLoginClick);
+  formLogin.addEventListener('submit', onFormLoginSubmit);
   btnFormClose.addEventListener('click', onBtnFormCloseClick);
   window.util.overlay.addEventListener('click', onOverlayClick);
   document.addEventListener('keydown', modalEscKeydown);

@@ -6,19 +6,13 @@
   var formLogin = document.querySelector('.form-login');
   var login = document.querySelector('#field-email');
   var password = document.querySelector('#field-password');
-  login.value = localStorage.getItem('email') || '';
+  var isStorageSupport = true;
+  var storageEmail = '';
 
   var showFormLogin = function () {
     formLogin.classList.add('form-login--show');
     window.util.overlay.classList.add('overlay--show-all');
     document.body.classList.add('overflow-hidden');
-
-    if (localStorage.getItem('email') === true) {
-      localStorage.setItem('email', login.value);
-      password.focus();
-    } else {
-      login.focus();
-    }
   };
 
   var hideFormLogin = function () {
@@ -30,6 +24,25 @@
   var onLoginClick = function (evt) {
     evt.preventDefault();
     showFormLogin();
+
+    if (storageEmail) {
+      login.value = storageEmail;
+      password.focus();
+    } else {
+      login.focus();
+    }
+  };
+
+  try {
+    storageEmail = localStorage.getItem('email');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  var onFormLoginSubmit = function () {
+    if (isStorageSupport) {
+      localStorage.setItem('email', login.value);
+    }
   };
 
   var onBtnFormCloseClick = function (evt) {
@@ -50,6 +63,7 @@
   };
 
   loginLink.addEventListener('click', onLoginClick);
+  formLogin.addEventListener('submit', onFormLoginSubmit);
   btnFormClose.addEventListener('click', onBtnFormCloseClick);
   window.util.overlay.addEventListener('click', onOverlayClick);
   document.addEventListener('keydown', modalEscKeydown);
