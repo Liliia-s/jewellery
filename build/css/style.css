@@ -881,7 +881,6 @@ html {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 270px;
-  height: 100%;
   margin-right: 30px;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
