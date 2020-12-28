@@ -6,7 +6,7 @@
   var formLogin = document.querySelector('.form-login');
   var login = document.querySelector('#field-email');
   var password = document.querySelector('#field-password');
-  var storageEmail = '';
+  login.value = localStorage.getItem('email') || '';
 
   var showFormLogin = function () {
     formLogin.classList.add('form-login--show');
@@ -14,7 +14,7 @@
     document.body.classList.add('overflow-hidden');
 
     if (localStorage.getItem('email') === true) {
-      login.value = storageEmail;
+      localStorage.setItem('email', login.value);
       password.focus();
     } else {
       login.focus();
