@@ -2383,14 +2383,13 @@ button.swiper__pagination-bullet {
       .catalog__button-wrapper button:not(:last-child) {
         margin-bottom: 20px; } }
 
-.catalog__products-wrapper {
-  width: 920px; }
-  @media (max-width: 1365px) {
-    .catalog__products-wrapper {
-      width: 75%; } }
-  @media (max-width: 1023px) {
-    .catalog__products-wrapper {
-      width: 100%; } }
+@media (max-width: 1365px) {
+  .catalog__products-wrapper {
+    width: 75%; } }
+
+@media (max-width: 1023px) {
+  .catalog__products-wrapper {
+    width: 100%; } }
 
 .catalog__products-list {
   margin: 0;
